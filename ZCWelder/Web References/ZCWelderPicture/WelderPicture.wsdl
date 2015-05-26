@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="ZC" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="ZC" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="ZC">
+      <s:element name="GetWelderPicture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdentificationCard" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelderPictureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWelderPictureResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelderPicturebyFileName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelderPicturebyFileNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWelderPicturebyFileNameResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetWelderPicture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mybyte" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdentificationCard" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="str_WelderName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetWelderPictureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SetWelderPictureResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteWelderPicture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdentificationCard" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteWelderPictureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteWelderPictureResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteWelderPicturebyFileName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_FileName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteWelderPicturebyFileNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteWelderPicturebyFileNameResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetWelderPictureFileNames">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetWelderPictureFileNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetWelderPictureFileNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExistWelderPicture">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="str_IdentificationCard" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistWelderPictureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistWelderPictureResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetWelderPictureSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWelderPicture" />
+  </wsdl:message>
+  <wsdl:message name="GetWelderPictureSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWelderPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWelderPicturebyFileNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWelderPicturebyFileName" />
+  </wsdl:message>
+  <wsdl:message name="GetWelderPicturebyFileNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWelderPicturebyFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetWelderPictureSoapIn">
+    <wsdl:part name="parameters" element="tns:SetWelderPicture" />
+  </wsdl:message>
+  <wsdl:message name="SetWelderPictureSoapOut">
+    <wsdl:part name="parameters" element="tns:SetWelderPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWelderPictureSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteWelderPicture" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWelderPictureSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteWelderPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWelderPicturebyFileNameSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteWelderPicturebyFileName" />
+  </wsdl:message>
+  <wsdl:message name="DeleteWelderPicturebyFileNameSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteWelderPicturebyFileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetWelderPictureFileNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetWelderPictureFileNames" />
+  </wsdl:message>
+  <wsdl:message name="GetWelderPictureFileNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetWelderPictureFileNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistWelderPictureSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistWelderPicture" />
+  </wsdl:message>
+  <wsdl:message name="ExistWelderPictureSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistWelderPictureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WelderPictureSoap">
+    <wsdl:operation name="GetWelderPicture">
+      <wsdl:input message="tns:GetWelderPictureSoapIn" />
+      <wsdl:output message="tns:GetWelderPictureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWelderPicturebyFileName">
+      <wsdl:input message="tns:GetWelderPicturebyFileNameSoapIn" />
+      <wsdl:output message="tns:GetWelderPicturebyFileNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetWelderPicture">
+      <wsdl:input message="tns:SetWelderPictureSoapIn" />
+      <wsdl:output message="tns:SetWelderPictureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWelderPicture">
+      <wsdl:input message="tns:DeleteWelderPictureSoapIn" />
+      <wsdl:output message="tns:DeleteWelderPictureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWelderPicturebyFileName">
+      <wsdl:input message="tns:DeleteWelderPicturebyFileNameSoapIn" />
+      <wsdl:output message="tns:DeleteWelderPicturebyFileNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWelderPictureFileNames">
+      <wsdl:input message="tns:GetWelderPictureFileNamesSoapIn" />
+      <wsdl:output message="tns:GetWelderPictureFileNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistWelderPicture">
+      <wsdl:input message="tns:ExistWelderPictureSoapIn" />
+      <wsdl:output message="tns:ExistWelderPictureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WelderPictureSoap" type="tns:WelderPictureSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWelderPicture">
+      <soap:operation soapAction="ZC/GetWelderPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelderPicturebyFileName">
+      <soap:operation soapAction="ZC/GetWelderPicturebyFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWelderPicture">
+      <soap:operation soapAction="ZC/SetWelderPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWelderPicture">
+      <soap:operation soapAction="ZC/DeleteWelderPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWelderPicturebyFileName">
+      <soap:operation soapAction="ZC/DeleteWelderPicturebyFileName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelderPictureFileNames">
+      <soap:operation soapAction="ZC/GetWelderPictureFileNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistWelderPicture">
+      <soap:operation soapAction="ZC/ExistWelderPicture" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WelderPictureSoap12" type="tns:WelderPictureSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetWelderPicture">
+      <soap12:operation soapAction="ZC/GetWelderPicture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelderPicturebyFileName">
+      <soap12:operation soapAction="ZC/GetWelderPicturebyFileName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetWelderPicture">
+      <soap12:operation soapAction="ZC/SetWelderPicture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWelderPicture">
+      <soap12:operation soapAction="ZC/DeleteWelderPicture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWelderPicturebyFileName">
+      <soap12:operation soapAction="ZC/DeleteWelderPicturebyFileName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWelderPictureFileNames">
+      <soap12:operation soapAction="ZC/GetWelderPictureFileNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistWelderPicture">
+      <soap12:operation soapAction="ZC/ExistWelderPicture" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WelderPicture">
+    <wsdl:port name="WelderPictureSoap" binding="tns:WelderPictureSoap">
+      <soap:address location="http://10.30.1.4/HPWelderPictures/WelderPicture.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WelderPictureSoap12" binding="tns:WelderPictureSoap12">
+      <soap12:address location="http://10.30.1.4/HPWelderPictures/WelderPicture.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,130 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="ZCWelder.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Corrector" Type="System.String" Scope="User">
+      <Value Profile="(Default)">王欢</Value>
+    </Setting>
+    <Setting Name="Assessor" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Rehear" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DefaultUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Lister" Type="System.String" Scope="User">
+      <Value Profile="(Default)">傅玉华</Value>
+    </Setting>
+    <Setting Name="Company" Type="System.String" Scope="User">
+      <Value Profile="(Default)">沪东中华造船（集团）有限公司</Value>
+    </Setting>
+    <Setting Name="AppRole" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AppRolePassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FormFont" Type="System.Drawing.Font" Scope="User">
+      <Value Profile="(Default)">宋体, 9pt</Value>
+    </Setting>
+    <Setting Name="FormBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="textBoxDoubleClickColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="GridColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DataGridViewBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="DataGridViewAlternatingBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="TheoryTeacherID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ArchiveTeacherID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="IssueQCTeacherID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SupervisorID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="SkillTeacherID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OriginalPeriod" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="IssuedOn" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">2011-02-15</Value>
+    </Setting>
+    <Setting Name="splitContainerHeadBackColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="splitContainerHeadForeColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="CCSTestCommitteeID" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SH11</Value>
+    </Setting>
+    <Setting Name="CCSTestCommittee" Type="System.String" Scope="User">
+      <Value Profile="(Default)">沪东中华造船（集团）焊工考试委员会</Value>
+    </Setting>
+    <Setting Name="WebServiceStartUp" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LinkTel" Type="System.String" Scope="User">
+      <Value Profile="(Default)">021-58713222-3706</Value>
+    </Setting>
+    <Setting Name="PeriodofProlongation" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="MailEmployerAddress" Type="System.String" Scope="User">
+      <Value Profile="(Default)">浦东大道2851号</Value>
+    </Setting>
+    <Setting Name="MailEmployer" Type="System.String" Scope="User">
+      <Value Profile="(Default)">沪东中华造船（集团）有限公司</Value>
+    </Setting>
+    <Setting Name="MailEmployerPostalcode" Type="System.String" Scope="User">
+      <Value Profile="(Default)">200129</Value>
+    </Setting>
+    <Setting Name="江南造船焊工信息管理软件_ZCWelderPicture_WelderPicture" Type="(Web Service URL)" Scope="User">
+      <Value Profile="(Default)">http://10.30.1.4/HPWelderPictures/WelderPicture.asmx</Value>
+    </Setting>
+    <Setting Name="WPSLockedColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Green</Value>
+    </Setting>
+    <Setting Name="notSupervisionColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Red</Value>
+    </Setting>
+    <Setting Name="zwjConn" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=localhost\sqlexpress;Initial Catalog=ZCWelder;Integrated Security=True;Min Pool Size=1&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=localhost\sqlexpress;Initial Catalog=ZCWelder;Integrated Security=True;Min Pool Size=1</Value>
+    </Setting>
+    <Setting Name="zwjConnhdhr" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=localhost\sqlexpress;Initial Catalog=hdhr;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=localhost\sqlexpress;Initial Catalog=hdhr;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="PlaceofTest" Type="System.String" Scope="User">
+      <Value Profile="(Default)">沪东中华</Value>
+    </Setting>
+    <Setting Name="SupervisionPlace" Type="System.String" Scope="User">
+      <Value Profile="(Default)">沪东中华</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,2783 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AE54C78-A74D-409A-BAAA-365A423FEC40}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ZCWelder</RootNamespace>
+    <AssemblyName>焊工信息管理软件</AssemblyName>
+    <ApplicationIcon>Resources\HPCCS1.ico</ApplicationIcon>
+    <SignManifests>true</SignManifests>
+    <ManifestCertificateThumbprint>17E4775078D9BD5A77E65790A760A4033A772FD8</ManifestCertificateThumbprint>
+    <ManifestKeyFile>zwj.pfx</ManifestKeyFile>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <GenerateManifests>true</GenerateManifests>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/ZCWelder/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>341</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <BootstrapperComponentsLocation>Relative</BootstrapperComponentsLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\Microsoft Visual Studio 9.0\Visual Studio Tools for Office\PIA\Office12\adodb.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClassBase\Class_Enum.cs" />
+    <Compile Include="ClassBase\Class_Event.cs" />
+    <Compile Include="ClassBase\Class_Exam.cs" />
+    <Compile Include="ClassBase\Class_Question.cs" />
+    <Compile Include="ClassBase\Class_SignUp.cs" />
+    <Compile Include="ClassBase\Class_Parameter.cs" />
+    <Compile Include="ClassBase\Class_Person.cs" />
+    <Compile Include="ClassBase\Class_Public.cs" />
+    <Compile Include="ClassBase\Class_Wps.cs" />
+    <Compile Include="CrystalReports\CCSFieldrecord.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCSFieldrecord.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\CCSFieldrecordExaminingNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CCSFieldrecordExaminingNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\EmployerStat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployerStat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\EmployerStatSecond.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployerStatSecond.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\EmployerStatThird.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmployerStatThird.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\Form_CrystalReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\Form_CrystalReport.designer.cs">
+      <DependentUpon>Form_CrystalReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReports\Form_ReportSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReports\Form_ReportSelect.designer.cs">
+      <DependentUpon>Form_ReportSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReports\GXSkillIssueStat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GXSkillIssueStat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\GXTheoryIssueArchive档案袋.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GXTheoryIssueArchive档案袋.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\GXTheoryIssueArchive档案袋_大.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GXTheoryIssueArchive档案袋_大.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\GXTheoryIssueStat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GXTheoryIssueStat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\GXWelderSkillIssueStudentsResult.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GXWelderSkillIssueStudentsResult.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\IssueArchive档案袋.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueArchive档案袋.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\IssueArchive档案袋_大.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueArchive档案袋_大.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\IssueDetail.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueDetail.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\IssueProcess.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueProcess.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\IssueStat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueStat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\IssueStat_KindofEmployer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IssueStat_KindofEmployer.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\UnitWelderQCStat.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnitWelderQCStat.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\WelderBelongQC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelderBelongQC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\WelderIssueStudentQC.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelderIssueStudentQC.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\WelderIssueStudentQCPosition.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelderIssueStudentQCPosition.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\WelderIssueStudentResult.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelderIssueStudentResult.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\WelderStudentSignUp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WelderStudentSignUp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\在册焊工持证统计.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>在册焊工持证统计.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\焊工考试出勤率统计.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>焊工考试出勤率统计.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\焊工考试现场记录表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>焊工考试现场记录表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\焊工考试现场记录表ExaminingNo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>焊工考试现场记录表ExaminingNo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\焊工考试现场记录表激活证书.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>焊工考试现场记录表激活证书.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\焊工考试申请表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>焊工考试申请表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\焊工考试结果登记表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>焊工考试结果登记表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\焊接培训记录表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>焊接培训记录表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\高新产品焊工技能培训考试申请表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>高新产品焊工技能培训考试申请表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="CrystalReports\高新产品焊工理论培训考试申请表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>高新产品焊工理论培训考试申请表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="DataSet\DataSet_Exam.cs">
+      <DependentUpon>DataSet_Exam.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet\DataSet_Exam.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet_Exam.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_ExportQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_ExportQC.Designer.cs">
+      <DependentUpon>Form_ExportQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryIssue_Query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryIssue_Query.Designer.cs">
+      <DependentUpon>Form_GXTheoryIssue_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryIssue_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryIssue_Update.Designer.cs">
+      <DependentUpon>Form_GXTheoryIssue_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryStudent_AddBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryStudent_AddBatch.Designer.cs">
+      <DependentUpon>Form_GXTheoryStudent_AddBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryStudent_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_GXTheoryStudent_Update.Designer.cs">
+      <DependentUpon>Form_GXTheoryStudent_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_IssueProcess_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_IssueProcess_Update.Designer.cs">
+      <DependentUpon>Form_IssueProcess_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_Issue_Query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_Issue_Query.Designer.cs">
+      <DependentUpon>Form_Issue_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_QC_AddBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_QC_AddBatch.Designer.cs">
+      <DependentUpon>Form_QC_AddBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_QC_AddBatchbyCCSAccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_QC_AddBatchbyCCSAccess.Designer.cs">
+      <DependentUpon>Form_QC_AddBatchbyCCSAccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_QC_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_QC_Update.Designer.cs">
+      <DependentUpon>Form_QC_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_Issue_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_Issue_Update.Designer.cs">
+      <DependentUpon>Form_Issue_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_ReviveQC_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_ReviveQC_Update.Designer.cs">
+      <DependentUpon>Form_ReviveQC_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_StudentQC_ImportFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_StudentQC_ImportFromExcel.Designer.cs">
+      <DependentUpon>Form_StudentQC_ImportFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_Student_AddBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_Student_AddBatch.Designer.cs">
+      <DependentUpon>Form_Student_AddBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_Student_ImportFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_Student_ImportFromExcel.designer.cs">
+      <DependentUpon>Form_Student_ImportFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_Student_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_Student_Update.Designer.cs">
+      <DependentUpon>Form_Student_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_Student_UpdateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_Student_UpdateBatch.Designer.cs">
+      <DependentUpon>Form_Student_UpdateBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_Student_UpdateResultBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_Student_UpdateResultBatch.Designer.cs">
+      <DependentUpon>Form_Student_UpdateResultBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_SubjectPositionResult_UpdateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_SubjectPositionResult_UpdateBatch.Designer.cs">
+      <DependentUpon>Form_SubjectPositionResult_UpdateBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Exam\Form_TestParameter_Input.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Exam\Form_TestParameter_Input.Designer.cs">
+      <DependentUpon>Form_TestParameter_Input.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_AboutBox.designer.cs">
+      <DependentUpon>Form_AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_EmployerQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_EmployerQuery.designer.cs">
+      <DependentUpon>Form_EmployerQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_GasAndWeldingFluxQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_GasAndWeldingFluxQuery.designer.cs">
+      <DependentUpon>Form_GasAndWeldingFluxQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_KindofEmployerQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_KindofEmployerQuery.Designer.cs">
+      <DependentUpon>Form_KindofEmployerQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_MaterialCCSGroupQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_MaterialCCSGroupQuery.Designer.cs">
+      <DependentUpon>Form_MaterialCCSGroupQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_MaterialISOGroupQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_MaterialISOGroupQuery.Designer.cs">
+      <DependentUpon>Form_MaterialISOGroupQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_MaterialQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_MaterialQuery.designer.cs">
+      <DependentUpon>Form_MaterialQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_ShipClassificationQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_ShipClassificationQuery.designer.cs">
+      <DependentUpon>Form_ShipClassificationQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_ShipQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_ShipQuery.Designer.cs">
+      <DependentUpon>Form_ShipQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingConsumableCCSGroupQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingConsumableCCSGroupQuery.Designer.cs">
+      <DependentUpon>Form_WeldingConsumableCCSGroupQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingConsumableISOGroupQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingConsumableISOGroupQuery.Designer.cs">
+      <DependentUpon>Form_WeldingConsumableISOGroupQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingConsumableQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingConsumableQuery.designer.cs">
+      <DependentUpon>Form_WeldingConsumableQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingEquipmentQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingEquipmentQuery.designer.cs">
+      <DependentUpon>Form_WeldingEquipmentQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingPositionQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingPositionQuery.designer.cs">
+      <DependentUpon>Form_WeldingPositionQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingProcessQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingProcessQuery.designer.cs">
+      <DependentUpon>Form_WeldingProcessQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingStandardGroupQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingStandardGroupQuery.designer.cs">
+      <DependentUpon>Form_WeldingStandardGroupQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingStandardQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingStandardQuery.designer.cs">
+      <DependentUpon>Form_WeldingStandardQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingSubject_Query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParameterQuery\Form_WeldingSubject_Query.Designer.cs">
+      <DependentUpon>Form_WeldingSubject_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_Assemblage_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_Assemblage_Update.Designer.cs">
+      <DependentUpon>Form_Assemblage_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_DepartmentUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_DepartmentUpdate.designer.cs">
+      <DependentUpon>Form_DepartmentUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_EmployerGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_EmployerGroupUpdate.Designer.cs">
+      <DependentUpon>Form_EmployerGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_EmployerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_EmployerUpdate.designer.cs">
+      <DependentUpon>Form_EmployerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_GasAndWeldingFluxUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_GasAndWeldingFluxUpdate.designer.cs">
+      <DependentUpon>Form_GasAndWeldingFluxUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_KindofEmployerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_KindofEmployerUpdate.Designer.cs">
+      <DependentUpon>Form_KindofEmployerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_KindofExamUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_KindofExamUpdate.Designer.cs">
+      <DependentUpon>Form_KindofExamUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_LaborServiceTeamUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_LaborServiceTeamUpdate.Designer.cs">
+      <DependentUpon>Form_LaborServiceTeamUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_MaterialCCSGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_MaterialCCSGroupUpdate.Designer.cs">
+      <DependentUpon>Form_MaterialCCSGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_MaterialISOGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_MaterialISOGroupUpdate.Designer.cs">
+      <DependentUpon>Form_MaterialISOGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_MaterialUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_MaterialUpdate.Designer.cs">
+      <DependentUpon>Form_MaterialUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_SchoolingUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_SchoolingUpdate.designer.cs">
+      <DependentUpon>Form_SchoolingUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_ShipandShipClassificationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_ShipandShipClassificationUpdate.Designer.cs">
+      <DependentUpon>Form_ShipandShipClassificationUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_ShipClassificationUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_ShipClassificationUpdate.Designer.cs">
+      <DependentUpon>Form_ShipClassificationUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_ShipUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_ShipUpdate.Designer.cs">
+      <DependentUpon>Form_ShipUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_TestCommitteeUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_TestCommitteeUpdate.Designer.cs">
+      <DependentUpon>Form_TestCommitteeUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingConsumableCCSGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingConsumableCCSGroupUpdate.Designer.cs">
+      <DependentUpon>Form_WeldingConsumableCCSGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingConsumableISOGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingConsumableISOGroupUpdate.Designer.cs">
+      <DependentUpon>Form_WeldingConsumableISOGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingEquipment_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingEquipment_Update.designer.cs">
+      <DependentUpon>Form_WeldingEquipment_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingPositionUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingPositionUpdate.designer.cs">
+      <DependentUpon>Form_WeldingPositionUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingProcessUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingProcessUpdate.designer.cs">
+      <DependentUpon>Form_WeldingProcessUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingSubjectApplicableUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingSubjectApplicableUpdate.Designer.cs">
+      <DependentUpon>Form_WeldingSubjectApplicableUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingSubjectPosition_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingSubjectPosition_Update.Designer.cs">
+      <DependentUpon>Form_WeldingSubjectPosition_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingSubject_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingSubject_Update.Designer.cs">
+      <DependentUpon>Form_WeldingSubject_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WorkPlaceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WorkPlaceUpdate.designer.cs">
+      <DependentUpon>Form_WorkPlaceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_BlackList_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_BlackList_Update.Designer.cs">
+      <DependentUpon>Form_BlackList_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_TestCommitteeRegistrationNo_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_TestCommitteeRegistrationNo_Update.Designer.cs">
+      <DependentUpon>Form_TestCommitteeRegistrationNo_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_WelderBelongExam_UpdateBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_WelderBelongExam_UpdateBatch.Designer.cs">
+      <DependentUpon>Form_WelderBelongExam_UpdateBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_WelderBelong_ImportFromExcel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_WelderBelong_ImportFromExcel.designer.cs">
+      <DependentUpon>Form_WelderBelong_ImportFromExcel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_WelderBelong_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_WelderBelong_Update.Designer.cs">
+      <DependentUpon>Form_WelderBelong_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_Welder_Query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_Welder_Query.Designer.cs">
+      <DependentUpon>Form_Welder_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_Welder_Synchronization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_Welder_Synchronization.Designer.cs">
+      <DependentUpon>Form_Welder_Synchronization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person\Form_Welder_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Person\Form_Welder_Update.Designer.cs">
+      <DependentUpon>Form_Welder_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="CrystalReports\CCSFieldrecord.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CCSFieldrecord.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\CCSFieldrecordExaminingNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CCSFieldrecordExaminingNo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\EmployerStat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployerStat.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\EmployerStatSecond.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployerStatSecond.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\EmployerStatThird.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>EmployerStatThird.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="CrystalReports\Form_CrystalReport.resx">
+      <DependentUpon>Form_CrystalReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReports\Form_ReportSelect.resx">
+      <DependentUpon>Form_ReportSelect.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="CrystalReports\IssueStat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IssueStat.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\IssueDetail.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IssueDetail.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\IssueStat_KindofEmployer.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IssueStat_KindofEmployer.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\WelderIssueStudentQC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WelderIssueStudentQC.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\WelderIssueStudentQCPosition.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WelderIssueStudentQCPosition.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\WelderIssueStudentResult.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WelderIssueStudentResult.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\WelderStudentSignUp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WelderStudentSignUp.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\IssueArchive档案袋.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IssueArchive档案袋.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\IssueProcess.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IssueProcess.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\UnitWelderQCStat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>UnitWelderQCStat.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\WelderBelongQC.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>WelderBelongQC.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\GXTheoryIssueArchive档案袋.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GXTheoryIssueArchive档案袋.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\GXSkillIssueStat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GXSkillIssueStat.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\GXTheoryIssueStat.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GXTheoryIssueStat.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\GXWelderSkillIssueStudentsResult.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GXWelderSkillIssueStudentsResult.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\焊工考试出勤率统计.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>焊工考试出勤率统计.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\焊工考试申请表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>焊工考试申请表.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\焊工考试现场记录表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>焊工考试现场记录表.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\焊工考试现场记录表ExaminingNo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>焊工考试现场记录表ExaminingNo.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\焊工考试结果登记表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>焊工考试结果登记表.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Exam\Form_ExportQC.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ExportQC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_GXTheoryIssue_Query.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_GXTheoryIssue_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_GXTheoryIssue_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_GXTheoryIssue_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_GXTheoryStudent_AddBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_GXTheoryStudent_AddBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_GXTheoryStudent_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_GXTheoryStudent_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_IssueProcess_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_IssueProcess_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_Issue_Query.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Issue_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_QC_AddBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_QC_AddBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_QC_AddBatchbyCCSAccess.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_QC_AddBatchbyCCSAccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_QC_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_QC_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_Issue_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Issue_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_Student_AddBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Student_AddBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_Student_ImportFromExcel.resx">
+      <DependentUpon>Form_Student_ImportFromExcel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_Student_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Student_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_Student_UpdateBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Student_UpdateBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_Student_UpdateResultBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Student_UpdateResultBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_SubjectPositionResult_UpdateBatch.resx">
+      <DependentUpon>Form_SubjectPositionResult_UpdateBatch.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_TestParameter_Input.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_TestParameter_Input.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_AboutBox.resx">
+      <DependentUpon>Form_AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_EmployerQuery.resx">
+      <DependentUpon>Form_EmployerQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_KindofEmployerQuery.resx">
+      <DependentUpon>Form_KindofEmployerQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_MaterialCCSGroupQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_MaterialCCSGroupQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_MaterialISOGroupQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_MaterialISOGroupQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_MaterialQuery.resx">
+      <DependentUpon>Form_MaterialQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_ShipClassificationQuery.resx">
+      <DependentUpon>Form_ShipClassificationQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_ShipQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ShipQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingConsumableCCSGroupQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingConsumableCCSGroupQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingConsumableISOGroupQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingConsumableISOGroupQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingConsumableQuery.resx">
+      <DependentUpon>Form_WeldingConsumableQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingProcessQuery.resx">
+      <DependentUpon>Form_WeldingProcessQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingStandardGroupQuery.resx">
+      <DependentUpon>Form_WeldingStandardGroupQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingStandardQuery.resx">
+      <DependentUpon>Form_WeldingStandardQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingSubject_Query.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingSubject_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_Assemblage_Update.resx">
+      <DependentUpon>Form_Assemblage_Update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_DepartmentUpdate.resx">
+      <DependentUpon>Form_DepartmentUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_EmployerGroupUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_EmployerGroupUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_EmployerUpdate.resx">
+      <DependentUpon>Form_EmployerUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_KindofEmployerUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_KindofEmployerUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_KindofExamUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_KindofExamUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_LaborServiceTeamUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_LaborServiceTeamUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_MaterialCCSGroupUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_MaterialCCSGroupUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_MaterialISOGroupUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_MaterialISOGroupUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_MaterialUpdate.resx">
+      <DependentUpon>Form_MaterialUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_SchoolingUpdate.resx">
+      <DependentUpon>Form_SchoolingUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_ShipandShipClassificationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ShipandShipClassificationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_ShipClassificationUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ShipClassificationUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_ShipUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_ShipUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_TestCommitteeUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_TestCommitteeUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingConsumableCCSGroupUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingConsumableCCSGroupUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingConsumableISOGroupUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingConsumableISOGroupUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingProcessUpdate.resx">
+      <DependentUpon>Form_WeldingProcessUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingSubjectApplicableUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingSubjectApplicableUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingSubjectPosition_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingSubjectPosition_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingSubject_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WeldingSubject_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WorkPlaceUpdate.resx">
+      <DependentUpon>Form_WorkPlaceUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_BlackList_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_BlackList_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_TestCommitteeRegistrationNo_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_TestCommitteeRegistrationNo_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_WelderBelongExam_UpdateBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WelderBelongExam_UpdateBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_WelderBelong_ImportFromExcel.resx">
+      <DependentUpon>Form_WelderBelong_ImportFromExcel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_WelderBelong_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_WelderBelong_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_Welder_Query.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Welder_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_Welder_Synchronization.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Welder_Synchronization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Person\Form_Welder_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_Welder_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Setting\Form_Setting.resx">
+      <DependentUpon>Form_Setting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp\Form_KindofEmployerIssue_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_KindofEmployerIssue_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp\Form_KindofEmployerStudent_AddBatch.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_KindofEmployerStudent_AddBatch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp\Form_KindofEmployerStudent_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_KindofEmployerStudent_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp\Form_KindofEmployerWelder_Query.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_KindofEmployerWelder_Query.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp\Form_KindofEmployerWelder_Update.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Form_KindofEmployerWelder_Update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_DataManager.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_DataManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_Exam.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_Exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_SignUp.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_Parameter.resx">
+      <DependentUpon>UserControl_Parameter.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_Welder.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_Welder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_WelderBelong.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderBelong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_WeldingSubject.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_BlackList_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_BlackList_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_DataManager_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_DataManager_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_DataManager_TreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_DataManager_TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_IssueProcess_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_IssueProcess_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_KindofEmployerExam_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployerExam_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_KindofEmployerIssue_DataGridView.resx">
+      <DependentUpon>UserControl_KindofEmployerIssue_DataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_KindofEmployerStudent_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployerStudent_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_KindofEmployerWelder_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployerWelder_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_KindofEmployer_TreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployer_TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WelderBelongIssueStudentQCRegistrationNo_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderBelongIssueStudentQCRegistrationNo_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_Issue_DataGridView.resx">
+      <DependentUpon>UserControl_Issue_DataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_Parameter_DataGridView.resx">
+      <DependentUpon>UserControl_Parameter_DataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_Parameter_TreeView.resx">
+      <DependentUpon>UserControl_Parameter_TreeView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingConsumableUpdate.resx">
+      <DependentUpon>Form_WeldingConsumableUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingStandardAndGroupUpdate.resx">
+      <DependentUpon>Form_WeldingStandardAndGroupUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingStandardUpdate.resx">
+      <DependentUpon>Form_WeldingStandardUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_ShipClassification_TreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_ShipClassification_TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_SubjectPositionResult_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_SubjectPositionResult_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_SubjectPositionResult_DataGridViewSecond.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_SubjectPositionResult_DataGridViewSecond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_Unit_TreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_Unit_TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WelderBelongExam_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderBelongExam_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WelderBelong_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderBelong_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_IssueStudentQCRegistrationNo_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_IssueStudentQCRegistrationNo_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WelderPicture_View.resx">
+      <DependentUpon>UserControl_WelderPicture_View.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WelderQuery.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WelderStudentQC_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderStudentQC_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_Welder_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_Welder_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WeldingSubjectPosition_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingSubjectPosition_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WeldingSubject_DataGridView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingSubject_DataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WeldingSubject_TreeView.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingSubject_TreeView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_Assemblage_Base.resx">
+      <DependentUpon>UserControl_Assemblage_Base.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_BlackListBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_BlackListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_DepartmentBase.resx">
+      <DependentUpon>UserControl_DepartmentBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_EmployerBase.resx">
+      <DependentUpon>UserControl_EmployerBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_EmployerGroupBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_EmployerGroupBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_GXTheoryIssue_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_GXTheoryIssue_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_GXTheoryStudent_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_GXTheoryStudent_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_IssueBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_IssueBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_IssueProcessBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_IssueProcessBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_KindofEmployerBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployerBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_KindofEmployerIssue_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployerIssue_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_KindofEmployerStudent_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployerStudent_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_KindofEmployerWelder_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofEmployerWelder_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_KindofExamBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_KindofExamBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_LaborServiceTeamBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_LaborServiceTeamBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_MaterialBase.resx">
+      <DependentUpon>UserControl_MaterialBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_MaterialCCSGroupBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_MaterialCCSGroupBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_MaterialISOGroupBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_MaterialISOGroupBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_QCBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_QCBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_SchoolingBase.resx">
+      <DependentUpon>UserControl_SchoolingBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_ShipandShipClassificationBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_ShipandShipClassificationBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_ShipBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_ShipBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_ShipClassificationBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_ShipClassificationBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_StudentBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_StudentBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_TestCommitteeRegistrationNo_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_TestCommitteeRegistrationNo_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_TestCommittee_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_TestCommittee_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WelderBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WelderBelong_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderBelong_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WelderExamBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderExamBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WelderPictureBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderPictureBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WelderTestCommitteeRegistrationNoBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WelderTestCommitteeRegistrationNoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingConsumableBase.resx">
+      <DependentUpon>UserControl_WeldingConsumableBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingConsumableCCSGroupAbBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingConsumableCCSGroupAbBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingConsumableISOGroupAbBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingConsumableISOGroupAbBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingProcessBase.resx">
+      <DependentUpon>UserControl_WeldingProcessBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingStandardAndGroupBase.resx">
+      <DependentUpon>UserControl_WeldingStandardAndGroupBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingStandardBase.resx">
+      <DependentUpon>UserControl_WeldingStandardBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingStandardGroupBase.resx">
+      <DependentUpon>UserControl_WeldingStandardGroupBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingSubjectApplicable_Base.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingSubjectApplicable_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingSubjectBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingSubjectBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingSubjectPositionBase.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>UserControl_WeldingSubjectPositionBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WorkPlaceBase.resx">
+      <DependentUpon>UserControl_WorkPlaceBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Question\Form_ExportPaper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Question\Form_ExportPaper.Designer.cs">
+      <DependentUpon>Form_ExportPaper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Form_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Form_Report.designer.cs">
+      <DependentUpon>Form_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Form_ReportServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Form_ReportServer.Designer.cs">
+      <DependentUpon>Form_ReportServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Form_Report_IssueStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Form_Report_IssueStat.Designer.cs">
+      <DependentUpon>Form_Report_IssueStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\Form_Report_WelderQC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\Form_Report_WelderQC.Designer.cs">
+      <DependentUpon>Form_Report_WelderQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Setting\Form_Setting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Setting\Form_Setting.designer.cs">
+      <DependentUpon>Form_Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerIssue_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerIssue_Update.Designer.cs">
+      <DependentUpon>Form_KindofEmployerIssue_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerStudent_AddBatch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerStudent_AddBatch.Designer.cs">
+      <DependentUpon>Form_KindofEmployerStudent_AddBatch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerStudent_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerStudent_Update.Designer.cs">
+      <DependentUpon>Form_KindofEmployerStudent_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerWelder_Query.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerWelder_Query.Designer.cs">
+      <DependentUpon>Form_KindofEmployerWelder_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerWelder_Update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp\Form_KindofEmployerWelder_Update.Designer.cs">
+      <DependentUpon>Form_KindofEmployerWelder_Update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_DataManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_DataManager.Designer.cs">
+      <DependentUpon>UserControl_DataManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_Exam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_Exam.Designer.cs">
+      <DependentUpon>UserControl_Exam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_ReviveQC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_ReviveQC.Designer.cs">
+      <DependentUpon>UserControl_ReviveQC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_SignUp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_SignUp.Designer.cs">
+      <DependentUpon>UserControl_SignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_Parameter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_Parameter.designer.cs">
+      <DependentUpon>UserControl_Parameter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_Welder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_Welder.Designer.cs">
+      <DependentUpon>UserControl_Welder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_WelderBelong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_WelderBelong.Designer.cs">
+      <DependentUpon>UserControl_WelderBelong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_WeldingSubject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_WeldingSubject.Designer.cs">
+      <DependentUpon>UserControl_WeldingSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_WPS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlFirst\UserControl_WPS.Designer.cs">
+      <DependentUpon>UserControl_WPS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_BlackList_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_BlackList_DataGridView.designer.cs">
+      <DependentUpon>UserControl_BlackList_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_DataManager_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_DataManager_DataGridView.designer.cs">
+      <DependentUpon>UserControl_DataManager_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_DataManager_TreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_DataManager_TreeView.Designer.cs">
+      <DependentUpon>UserControl_DataManager_TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_IssueProcess_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_IssueProcess_DataGridView.designer.cs">
+      <DependentUpon>UserControl_IssueProcess_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerExam_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerExam_DataGridView.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerExam_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerIssue_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerIssue_DataGridView.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerIssue_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerStudent_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerStudent_DataGridView.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerStudent_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerWelder_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployerWelder_DataGridView.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerWelder_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployer_TreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_KindofEmployer_TreeView.Designer.cs">
+      <DependentUpon>UserControl_KindofEmployer_TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_ReviveQC_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_ReviveQC_DataGridView.designer.cs">
+      <DependentUpon>UserControl_ReviveQC_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelongLog_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelongLog_DataGridView.designer.cs">
+      <DependentUpon>UserControl_WelderBelongLog_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubjectApplicable_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubjectApplicable_DataGridView.designer.cs">
+      <DependentUpon>UserControl_WeldingSubjectApplicable_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSImageDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSImageDataGridView.designer.cs">
+      <DependentUpon>UserControl_WPSImageDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSHeatTreatmentDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSHeatTreatmentDataGridView.designer.cs">
+      <DependentUpon>UserControl_WPSHeatTreatmentDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSGasAndWeldingFluxDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSGasAndWeldingFluxDataGridView.designer.cs">
+      <DependentUpon>UserControl_WPSGasAndWeldingFluxDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSWeldingSequenceDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPSWeldingSequenceDataGridView.designer.cs">
+      <DependentUpon>UserControl_WPSWeldingSequenceDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPS_Query.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPS_Query.designer.cs">
+      <DependentUpon>UserControl_WPS_Query.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelongIssueStudentQCRegistrationNo_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelongIssueStudentQCRegistrationNo_DataGridView.designer.cs">
+      <DependentUpon>UserControl_WelderBelongIssueStudentQCRegistrationNo_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Issue_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Issue_DataGridView.designer.cs">
+      <DependentUpon>UserControl_Issue_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Parameter_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Parameter_DataGridView.designer.cs">
+      <DependentUpon>UserControl_Parameter_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Parameter_TreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Parameter_TreeView.designer.cs">
+      <DependentUpon>UserControl_Parameter_TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingConsumableUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingConsumableUpdate.designer.cs">
+      <DependentUpon>Form_WeldingConsumableUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingStandardAndGroupUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingStandardAndGroupUpdate.designer.cs">
+      <DependentUpon>Form_WeldingStandardAndGroupUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingStandardUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Parameter\Form_WeldingStandardUpdate.designer.cs">
+      <DependentUpon>Form_WeldingStandardUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_ShipClassification_TreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_ShipClassification_TreeView.Designer.cs">
+      <DependentUpon>UserControl_ShipClassification_TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_SubjectPositionResult_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_SubjectPositionResult_DataGridView.designer.cs">
+      <DependentUpon>UserControl_SubjectPositionResult_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_SubjectPositionResult_DataGridViewSecond.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_SubjectPositionResult_DataGridViewSecond.designer.cs">
+      <DependentUpon>UserControl_SubjectPositionResult_DataGridViewSecond.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Unit_TreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Unit_TreeView.Designer.cs">
+      <DependentUpon>UserControl_Unit_TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelongExam_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelongExam_DataGridView.designer.cs">
+      <DependentUpon>UserControl_WelderBelongExam_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelong_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderBelong_DataGridView.designer.cs">
+      <DependentUpon>UserControl_WelderBelong_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_IssueStudentQCRegistrationNo_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_IssueStudentQCRegistrationNo_DataGridView.designer.cs">
+      <DependentUpon>UserControl_IssueStudentQCRegistrationNo_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderPicture_View.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderPicture_View.Designer.cs">
+      <DependentUpon>UserControl_WelderPicture_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderQuery.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderQuery.Designer.cs">
+      <DependentUpon>UserControl_WelderQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderStudentQC_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WelderStudentQC_DataGridView.designer.cs">
+      <DependentUpon>UserControl_WelderStudentQC_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Welder_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_Welder_DataGridView.designer.cs">
+      <DependentUpon>UserControl_Welder_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubjectPosition_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubjectPosition_DataGridView.Designer.cs">
+      <DependentUpon>UserControl_WeldingSubjectPosition_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubject_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubject_DataGridView.Designer.cs">
+      <DependentUpon>UserControl_WeldingSubject_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubject_TreeView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WeldingSubject_TreeView.Designer.cs">
+      <DependentUpon>UserControl_WeldingSubject_TreeView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPS_DataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlSecond\UserControl_WPS_DataGridView.designer.cs">
+      <DependentUpon>UserControl_WPS_DataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_Assemblage_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_Assemblage_Base.designer.cs">
+      <DependentUpon>UserControl_Assemblage_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_BlackListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_BlackListBase.designer.cs">
+      <DependentUpon>UserControl_BlackListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_DepartmentBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_DepartmentBase.designer.cs">
+      <DependentUpon>UserControl_DepartmentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_EmployerBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_EmployerBase.designer.cs">
+      <DependentUpon>UserControl_EmployerBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_EmployerGroupBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_EmployerGroupBase.designer.cs">
+      <DependentUpon>UserControl_EmployerGroupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_GasAndWeldingFluxBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_GasAndWeldingFluxBase.designer.cs">
+      <DependentUpon>UserControl_GasAndWeldingFluxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_GXTheoryIssue_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_GXTheoryIssue_Base.designer.cs">
+      <DependentUpon>UserControl_GXTheoryIssue_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_GXTheoryStudent_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_GXTheoryStudent_Base.designer.cs">
+      <DependentUpon>UserControl_GXTheoryStudent_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_IssueBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_IssueBase.Designer.cs">
+      <DependentUpon>UserControl_IssueBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_IssueProcessBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_IssueProcessBase.designer.cs">
+      <DependentUpon>UserControl_IssueProcessBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerBase.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerIssue_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerIssue_Base.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerIssue_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerStudent_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerStudent_Base.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerStudent_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerWelder_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofEmployerWelder_Base.designer.cs">
+      <DependentUpon>UserControl_KindofEmployerWelder_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofExamBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_KindofExamBase.designer.cs">
+      <DependentUpon>UserControl_KindofExamBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_LaborServiceTeamBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_LaborServiceTeamBase.Designer.cs">
+      <DependentUpon>UserControl_LaborServiceTeamBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_MaterialBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_MaterialBase.designer.cs">
+      <DependentUpon>UserControl_MaterialBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_MaterialCCSGroupBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_MaterialCCSGroupBase.designer.cs">
+      <DependentUpon>UserControl_MaterialCCSGroupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_MaterialISOGroupBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_MaterialISOGroupBase.designer.cs">
+      <DependentUpon>UserControl_MaterialISOGroupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ReviveQCBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ReviveQCBase.designer.cs">
+      <DependentUpon>UserControl_ReviveQCBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSHeatTreatmentBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSHeatTreatmentBase.designer.cs">
+      <DependentUpon>UserControl_WPSHeatTreatmentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSGasAndWeldingFluxBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSGasAndWeldingFluxBase.designer.cs">
+      <DependentUpon>UserControl_WPSGasAndWeldingFluxBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSWeldingLayerBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSWeldingLayerBase.designer.cs">
+      <DependentUpon>UserControl_WPSWeldingLayerBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSWeldingSequenceBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSWeldingSequenceBase.designer.cs">
+      <DependentUpon>UserControl_WPSWeldingSequenceBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingEquipmentBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingEquipmentBase.designer.cs">
+      <DependentUpon>UserControl_WeldingEquipmentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingPositionBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingPositionBase.designer.cs">
+      <DependentUpon>UserControl_WeldingPositionBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WPSBase.designer.cs">
+      <DependentUpon>UserControl_WPSBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_QCBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_QCBase.designer.cs">
+      <DependentUpon>UserControl_QCBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_SchoolingBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_SchoolingBase.designer.cs">
+      <DependentUpon>UserControl_SchoolingBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ShipandShipClassificationBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ShipandShipClassificationBase.Designer.cs">
+      <DependentUpon>UserControl_ShipandShipClassificationBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ShipBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ShipBase.designer.cs">
+      <DependentUpon>UserControl_ShipBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ShipClassificationBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_ShipClassificationBase.designer.cs">
+      <DependentUpon>UserControl_ShipClassificationBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_StudentBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_StudentBase.designer.cs">
+      <DependentUpon>UserControl_StudentBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_TestCommitteeRegistrationNo_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_TestCommitteeRegistrationNo_Base.designer.cs">
+      <DependentUpon>UserControl_TestCommitteeRegistrationNo_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_TestCommittee_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_TestCommittee_Base.designer.cs">
+      <DependentUpon>UserControl_TestCommittee_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderBase.designer.cs">
+      <DependentUpon>UserControl_WelderBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderBelong_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderBelong_Base.designer.cs">
+      <DependentUpon>UserControl_WelderBelong_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderExamBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderExamBase.designer.cs">
+      <DependentUpon>UserControl_WelderExamBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderPictureBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderPictureBase.Designer.cs">
+      <DependentUpon>UserControl_WelderPictureBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderTestCommitteeRegistrationNoBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WelderTestCommitteeRegistrationNoBase.designer.cs">
+      <DependentUpon>UserControl_WelderTestCommitteeRegistrationNoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingConsumableBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingConsumableBase.designer.cs">
+      <DependentUpon>UserControl_WeldingConsumableBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingConsumableCCSGroupAbBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingConsumableCCSGroupAbBase.Designer.cs">
+      <DependentUpon>UserControl_WeldingConsumableCCSGroupAbBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingConsumableISOGroupAbBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingConsumableISOGroupAbBase.Designer.cs">
+      <DependentUpon>UserControl_WeldingConsumableISOGroupAbBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingProcessBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingProcessBase.designer.cs">
+      <DependentUpon>UserControl_WeldingProcessBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingStandardAndGroupBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingStandardAndGroupBase.designer.cs">
+      <DependentUpon>UserControl_WeldingStandardAndGroupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingStandardBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingStandardBase.designer.cs">
+      <DependentUpon>UserControl_WeldingStandardBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingStandardGroupBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingStandardGroupBase.designer.cs">
+      <DependentUpon>UserControl_WeldingStandardGroupBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingSubjectApplicable_Base.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingSubjectApplicable_Base.designer.cs">
+      <DependentUpon>UserControl_WeldingSubjectApplicable_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingSubjectBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingSubjectBase.designer.cs">
+      <DependentUpon>UserControl_WeldingSubjectBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingSubjectPositionBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WeldingSubjectPositionBase.designer.cs">
+      <DependentUpon>UserControl_WeldingSubjectPositionBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WorkPlaceBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlThird\UserControl_WorkPlaceBase.designer.cs">
+      <DependentUpon>UserControl_WorkPlaceBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ZCWelderPicture\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="WPS\Form_WPSImageUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPS\Form_WPSImageUpdate.designer.cs">
+      <DependentUpon>Form_WPSImageUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPS\Form_WPSHeatTreatmentUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPS\Form_WPSHeatTreatmentUpdate.designer.cs">
+      <DependentUpon>Form_WPSHeatTreatmentUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPS\Form_WPSGasAndWeldingFluxUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPS\Form_WPSGasAndWeldingFluxUpdate.designer.cs">
+      <DependentUpon>Form_WPSGasAndWeldingFluxUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPS\Form_WpsQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPS\Form_WpsQuery.Designer.cs">
+      <DependentUpon>Form_WpsQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPS\Form_WPSWeldingSequenceUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPS\Form_WPSWeldingSequenceUpdate.designer.cs">
+      <DependentUpon>Form_WPSWeldingSequenceUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPS\Form_WPSWeldingLayerUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPS\Form_WPSWeldingLayerUpdate.designer.cs">
+      <DependentUpon>Form_WPSWeldingLayerUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WPS\Form_WPSUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WPS\Form_WPSUpdate.designer.cs">
+      <DependentUpon>Form_WPSUpdate.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPCCS1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HPCCS2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JNHP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\班级查询1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\班级查询2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\班级管理 .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\报考单位班级管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\报考申请.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\参数设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\打印报表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\单个班级信息.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导出报表.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\导入外部数据.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\分类数据管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\焊工人力资源管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\焊工信息管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\焊接参数设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\考试科目设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\科目设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\数据管理.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\系统设置.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\信息查询.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DataSet\DataSet_Exam.xsc">
+      <DependentUpon>DataSet_Exam.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet\DataSet_Exam.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet_Exam.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet\DataSet_Exam.xss">
+      <DependentUpon>DataSet_Exam.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\证书管理.png" />
+    <None Include="zwj.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="BusinessObjects.CrystalReports.10.5">
+      <Visible>False</Visible>
+      <ProductName>Crystal Reports Basic for Visual Studio 2008 %28x86, x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\CCSSIGN.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\Vacancy.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CCS焊工资格证书背面.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GX焊工上岗证.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GX焊工培训记录.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GX焊工资格证书.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\安装公司检验委托单.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\江南造船理化试验申请单.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\ABS焊工证书.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\BV焊工证书.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\焊工照片.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\EMS_模板.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CCS焊工资格证书.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\在册焊工名单导入模板.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\焊工考试名单导入模板.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\在册焊工持证统计.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>在册焊工持证统计.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\焊工考试现场记录表激活证书.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>焊工考试现场记录表激活证书.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\高新产品焊工技能培训考试申请表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>高新产品焊工技能培训考试申请表.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\高新产品焊工理论培训考试申请表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>高新产品焊工理论培训考试申请表.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\IssueArchive档案袋_大.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>IssueArchive档案袋_大.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\GXTheoryIssueArchive档案袋_大.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GXTheoryIssueArchive档案袋_大.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="CrystalReports\焊接培训记录表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>焊接培训记录表.cs</LastGenOutput>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Exam\Form_ReviveQC_Update.resx">
+      <DependentUpon>Form_ReviveQC_Update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Exam\Form_StudentQC_ImportFromExcel.resx">
+      <DependentUpon>Form_StudentQC_ImportFromExcel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_GasAndWeldingFluxQuery.resx">
+      <DependentUpon>Form_GasAndWeldingFluxQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingEquipmentQuery.resx">
+      <DependentUpon>Form_WeldingEquipmentQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParameterQuery\Form_WeldingPositionQuery.resx">
+      <DependentUpon>Form_WeldingPositionQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_GasAndWeldingFluxUpdate.resx">
+      <DependentUpon>Form_GasAndWeldingFluxUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingEquipment_Update.resx">
+      <DependentUpon>Form_WeldingEquipment_Update.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Parameter\Form_WeldingPositionUpdate.resx">
+      <DependentUpon>Form_WeldingPositionUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Question\Form_ExportPaper.resx">
+      <DependentUpon>Form_ExportPaper.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form_Report.resx">
+      <DependentUpon>Form_Report.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form_ReportServer.resx">
+      <DependentUpon>Form_ReportServer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form_Report_IssueStat.resx">
+      <DependentUpon>Form_Report_IssueStat.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\Form_Report_WelderQC.resx">
+      <DependentUpon>Form_Report_WelderQC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\焊工考试班级统计报表.rdlc" />
+    <EmbeddedResource Include="Reports\焊工考试班级统计汇总表.rdlc" />
+    <EmbeddedResource Include="Reports\焊工证书信息汇总表.rdlc" />
+    <EmbeddedResource Include="UserControlFirst\UserControl_ReviveQC.resx">
+      <DependentUpon>UserControl_ReviveQC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlFirst\UserControl_WPS.resx">
+      <DependentUpon>UserControl_WPS.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_ReviveQC_DataGridView.resx">
+      <DependentUpon>UserControl_ReviveQC_DataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WelderBelongLog_DataGridView.resx">
+      <DependentUpon>UserControl_WelderBelongLog_DataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WeldingSubjectApplicable_DataGridView.resx">
+      <DependentUpon>UserControl_WeldingSubjectApplicable_DataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WPSImageDataGridView.resx">
+      <DependentUpon>UserControl_WPSImageDataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WPSHeatTreatmentDataGridView.resx">
+      <DependentUpon>UserControl_WPSHeatTreatmentDataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WPSGasAndWeldingFluxDataGridView.resx">
+      <DependentUpon>UserControl_WPSGasAndWeldingFluxDataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WPSWeldingSequenceDataGridView.resx">
+      <DependentUpon>UserControl_WPSWeldingSequenceDataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WPS_Query.resx">
+      <DependentUpon>UserControl_WPS_Query.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlSecond\UserControl_WPS_DataGridView.resx">
+      <DependentUpon>UserControl_WPS_DataGridView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_GasAndWeldingFluxBase.resx">
+      <DependentUpon>UserControl_GasAndWeldingFluxBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_ReviveQCBase.resx">
+      <DependentUpon>UserControl_ReviveQCBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WPSHeatTreatmentBase.resx">
+      <DependentUpon>UserControl_WPSHeatTreatmentBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WPSGasAndWeldingFluxBase.resx">
+      <DependentUpon>UserControl_WPSGasAndWeldingFluxBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WPSWeldingLayerBase.resx">
+      <DependentUpon>UserControl_WPSWeldingLayerBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WPSWeldingSequenceBase.resx">
+      <DependentUpon>UserControl_WPSWeldingSequenceBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingEquipmentBase.resx">
+      <DependentUpon>UserControl_WeldingEquipmentBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WeldingPositionBase.resx">
+      <DependentUpon>UserControl_WeldingPositionBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlThird\UserControl_WPSBase.resx">
+      <DependentUpon>UserControl_WPSBase.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPS\Form_WPSImageUpdate.resx">
+      <DependentUpon>Form_WPSImageUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPS\Form_WPSHeatTreatmentUpdate.resx">
+      <DependentUpon>Form_WPSHeatTreatmentUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPS\Form_WPSGasAndWeldingFluxUpdate.resx">
+      <DependentUpon>Form_WPSGasAndWeldingFluxUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPS\Form_WpsQuery.resx">
+      <DependentUpon>Form_WpsQuery.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPS\Form_WPSWeldingSequenceUpdate.resx">
+      <DependentUpon>Form_WPSWeldingSequenceUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPS\Form_WPSWeldingLayerUpdate.resx">
+      <DependentUpon>Form_WPSWeldingLayerUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WPS\Form_WPSUpdate.resx">
+      <DependentUpon>Form_WPSUpdate.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="Data\DNV焊工证书.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\焊工失效证书重新启用申请表.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\焊工考试申请表.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\高新产品焊工培训考试申请表.xls">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HP样卷模版.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HP样卷模版无多项选择题.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HP样卷答案模版.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\HP样卷答案模版无多项选择题.doc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LR焊工证书.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LTe50327.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LTe50328.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LTe50329.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LTe50330.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LTe50331.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LTe50332.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\LR焊接操作工证书.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\GX焊工资格证书HD.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data\CCS评定汇总表.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\Logo_2009.jpg" />
+    <None Include="Resources\Logo_2009.bmp" />
+    <None Include="Resources\WPS.png" />
+    <None Include="Web References\ZCWelderPicture\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\ZCWelderPicture\WelderPicture.disco" />
+    <None Include="Web References\ZCWelderPicture\WelderPicture.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="IWshRuntimeLibrary">
+      <Guid>{F935DC20-1CF0-11D0-ADB9-00C04FD58A0B}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <Private>True</Private>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.30.1.4/HPWelderPictures/WelderPicture.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ZCWelderPicture\</RelPath>
+      <UpdateFromURL>http://10.30.1.4/HPWelderPictures/WelderPicture.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>江南造船焊工信息管理软件_ZCWelderPicture_WelderPicture</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Data\CCSSIGN.mdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Data\Vacancy.mdb">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ZCCL\ZCCL\ZCCL.csproj">
+      <Project>{8FCC02C4-B42A-459D-881B-380C3CAC355F}</Project>
+      <Name>ZCCL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

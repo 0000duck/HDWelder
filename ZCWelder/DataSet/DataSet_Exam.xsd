@@ -1,0 +1,1694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Exam" targetNamespace="http://tempuri.org/DataSet_Exam.xsd" xmlns:mstns="http://tempuri.org/DataSet_Exam.xsd" xmlns="http://tempuri.org/DataSet_Exam.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="zwjConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="zwjConn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ZCWelder.Properties.Settings.GlobalReference.Default.zwjConn" Provider="System.Data.SqlClient" />
+          <Connection ConnectionStringObject="Provider=SQLOLEDB;Data Source=10.30.1.4;Password=123456;User ID=hpuser;Initial Catalog=ZCWelder" IsAppSettingsProperty="false" Modifier="Assembly" Name="SQLOLEDB.10.30.1.4.ZCWelder" Provider="System.Data.OleDb" />
+          <Connection ConnectionStringObject="Provider=SQLOLEDB;Data Source=STDD-ZHUWEIJIN;Password=hp2010;User ID=hpadmin;Initial Catalog=ZCWelder" IsAppSettingsProperty="false" Modifier="Assembly" Name="SQLOLEDB.STDD-ZHUWEIJIN.ZCWelder" Provider="System.Data.OleDb" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="IssueTableAdapter" GeneratorDataComponentClassName="IssueTableAdapter" Name="Issue" UserDataComponentName="IssueTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zwjConn (Settings)" DbObjectName="ZCWelder.dbo.View_Exam_Issue" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT View_Exam_Issue.*
+FROM View_Exam_Issue</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IssueNo" DataSetColumn="IssueNo" />
+              <Mapping SourceColumn="ShipClassificationAb" DataSetColumn="ShipClassificationAb" />
+              <Mapping SourceColumn="ShipboardNo" DataSetColumn="ShipboardNo" />
+              <Mapping SourceColumn="WeldingProcessAb" DataSetColumn="WeldingProcessAb" />
+              <Mapping SourceColumn="IssueStatus" DataSetColumn="IssueStatus" />
+              <Mapping SourceColumn="PlaceofTest" DataSetColumn="PlaceofTest" />
+              <Mapping SourceColumn="SignUpDate" DataSetColumn="SignUpDate" />
+              <Mapping SourceColumn="DateBeginningofTrain" DataSetColumn="DateBeginningofTrain" />
+              <Mapping SourceColumn="DateEndingofTrain" DataSetColumn="DateEndingofTrain" />
+              <Mapping SourceColumn="KindofEmployer" DataSetColumn="KindofEmployer" />
+              <Mapping SourceColumn="IssueEmployerHPID" DataSetColumn="IssueEmployerHPID" />
+              <Mapping SourceColumn="IssueKindofExam" DataSetColumn="IssueKindofExam" />
+              <Mapping SourceColumn="IssueMaterial" DataSetColumn="IssueMaterial" />
+              <Mapping SourceColumn="IssueDimensionofMaterial" DataSetColumn="IssueDimensionofMaterial" />
+              <Mapping SourceColumn="IssueWeldingConsumable" DataSetColumn="IssueWeldingConsumable" />
+              <Mapping SourceColumn="IssueThickness" DataSetColumn="IssueThickness" />
+              <Mapping SourceColumn="IssueExternalDiameter" DataSetColumn="IssueExternalDiameter" />
+              <Mapping SourceColumn="IssueRenderWeldingRodDiameter" DataSetColumn="IssueRenderWeldingRodDiameter" />
+              <Mapping SourceColumn="IssueWeldingRodDiameter" DataSetColumn="IssueWeldingRodDiameter" />
+              <Mapping SourceColumn="IssueCoverWeldingRodDiameter" DataSetColumn="IssueCoverWeldingRodDiameter" />
+              <Mapping SourceColumn="IssueAssemblage" DataSetColumn="IssueAssemblage" />
+              <Mapping SourceColumn="TheoryExamDate" DataSetColumn="TheoryExamDate" />
+              <Mapping SourceColumn="SkillExamDate" DataSetColumn="SkillExamDate" />
+              <Mapping SourceColumn="TheoryMakeupDate" DataSetColumn="TheoryMakeupDate" />
+              <Mapping SourceColumn="SkillMakeupDate" DataSetColumn="SkillMakeupDate" />
+              <Mapping SourceColumn="TheoryTeacherID" DataSetColumn="TheoryTeacherID" />
+              <Mapping SourceColumn="SkillTeacherID" DataSetColumn="SkillTeacherID" />
+              <Mapping SourceColumn="IssueQCTeacherID" DataSetColumn="IssueQCTeacherID" />
+              <Mapping SourceColumn="SupervisorID" DataSetColumn="SupervisorID" />
+              <Mapping SourceColumn="ArchiveTeacherID" DataSetColumn="ArchiveTeacherID" />
+              <Mapping SourceColumn="VisualTestDate" DataSetColumn="VisualTestDate" />
+              <Mapping SourceColumn="BendTestDate" DataSetColumn="BendTestDate" />
+              <Mapping SourceColumn="RTTestDate" DataSetColumn="RTTestDate" />
+              <Mapping SourceColumn="IssueIssuedOn" DataSetColumn="IssueIssuedOn" />
+              <Mapping SourceColumn="IssueSupervisionPlace" DataSetColumn="IssueSupervisionPlace" />
+              <Mapping SourceColumn="IssuePeriodofValidity" DataSetColumn="IssuePeriodofValidity" />
+              <Mapping SourceColumn="IssueRemark" DataSetColumn="IssueRemark" />
+              <Mapping SourceColumn="Student" DataSetColumn="Student" />
+              <Mapping SourceColumn="TheoryStudent" DataSetColumn="TheoryStudent" />
+              <Mapping SourceColumn="TheoryTrained" DataSetColumn="TheoryTrained" />
+              <Mapping SourceColumn="TheoryExaminee" DataSetColumn="TheoryExaminee" />
+              <Mapping SourceColumn="TheoryPresenceRatio" DataSetColumn="TheoryPresenceRatio" />
+              <Mapping SourceColumn="TheoryPass" DataSetColumn="TheoryPass" />
+              <Mapping SourceColumn="TheoryPercent" DataSetColumn="TheoryPercent" />
+              <Mapping SourceColumn="TheoryMakeupTrained" DataSetColumn="TheoryMakeupTrained" />
+              <Mapping SourceColumn="TheoryMakeupExaminee" DataSetColumn="TheoryMakeupExaminee" />
+              <Mapping SourceColumn="TheoryMakeupPresenceRatio" DataSetColumn="TheoryMakeupPresenceRatio" />
+              <Mapping SourceColumn="TheoryMakeupPass" DataSetColumn="TheoryMakeupPass" />
+              <Mapping SourceColumn="TheoryMakeupPercent" DataSetColumn="TheoryMakeupPercent" />
+              <Mapping SourceColumn="TheoryPassAll" DataSetColumn="TheoryPassAll" />
+              <Mapping SourceColumn="TheoryPercentAll" DataSetColumn="TheoryPercentAll" />
+              <Mapping SourceColumn="SkillStudent" DataSetColumn="SkillStudent" />
+              <Mapping SourceColumn="SkillTrained" DataSetColumn="SkillTrained" />
+              <Mapping SourceColumn="SkillExaminee" DataSetColumn="SkillExaminee" />
+              <Mapping SourceColumn="SkillPresenceRatio" DataSetColumn="SkillPresenceRatio" />
+              <Mapping SourceColumn="SkillPass" DataSetColumn="SkillPass" />
+              <Mapping SourceColumn="SkillPercent" DataSetColumn="SkillPercent" />
+              <Mapping SourceColumn="SkillMakeupTrained" DataSetColumn="SkillMakeupTrained" />
+              <Mapping SourceColumn="SkillMakeupExaminee" DataSetColumn="SkillMakeupExaminee" />
+              <Mapping SourceColumn="SkillMakeupPresenceRatio" DataSetColumn="SkillMakeupPresenceRatio" />
+              <Mapping SourceColumn="SkillMakeupPass" DataSetColumn="SkillMakeupPass" />
+              <Mapping SourceColumn="SkillMakeupPercent" DataSetColumn="SkillMakeupPercent" />
+              <Mapping SourceColumn="SkillPassAll" DataSetColumn="SkillPassAll" />
+              <Mapping SourceColumn="SkillPercentAll" DataSetColumn="SkillPercentAll" />
+              <Mapping SourceColumn="PassPercentAll" DataSetColumn="PassPercentAll" />
+              <Mapping SourceColumn="SkillOne" DataSetColumn="SkillOne" />
+              <Mapping SourceColumn="SkillTwo" DataSetColumn="SkillTwo" />
+              <Mapping SourceColumn="SkillThree" DataSetColumn="SkillThree" />
+              <Mapping SourceColumn="SkillFour" DataSetColumn="SkillFour" />
+              <Mapping SourceColumn="SkillFive" DataSetColumn="SkillFive" />
+              <Mapping SourceColumn="SkillSix" DataSetColumn="SkillSix" />
+              <Mapping SourceColumn="SkillTW" DataSetColumn="SkillTW" />
+              <Mapping SourceColumn="SkillOther" DataSetColumn="SkillOther" />
+              <Mapping SourceColumn="DateofAdd" DataSetColumn="DateofAdd" />
+              <Mapping SourceColumn="DateofModify" DataSetColumn="DateofModify" />
+              <Mapping SourceColumn="TheoryTeacherUserName" DataSetColumn="TheoryTeacherUserName" />
+              <Mapping SourceColumn="TheoryTeacherName" DataSetColumn="TheoryTeacherName" />
+              <Mapping SourceColumn="SkillTeacherUserName" DataSetColumn="SkillTeacherUserName" />
+              <Mapping SourceColumn="SkillTeacherName" DataSetColumn="SkillTeacherName" />
+              <Mapping SourceColumn="IssueQCTeacherUserName" DataSetColumn="IssueQCTeacherUserName" />
+              <Mapping SourceColumn="IssueQCTeacherName" DataSetColumn="IssueQCTeacherName" />
+              <Mapping SourceColumn="SupervisorUserName" DataSetColumn="SupervisorUserName" />
+              <Mapping SourceColumn="SupervisorName" DataSetColumn="SupervisorName" />
+              <Mapping SourceColumn="ArchiveTeacherUserName" DataSetColumn="ArchiveTeacherUserName" />
+              <Mapping SourceColumn="ArchiveTeacherName" DataSetColumn="ArchiveTeacherName" />
+              <Mapping SourceColumn="IssueEmployer" DataSetColumn="IssueEmployer" />
+              <Mapping SourceColumn="IssueEmployerEnglish" DataSetColumn="IssueEmployerEnglish" />
+              <Mapping SourceColumn="IssueShortenedEmployer" DataSetColumn="IssueShortenedEmployer" />
+              <Mapping SourceColumn="IssueEmployerGroup" DataSetColumn="IssueEmployerGroup" />
+              <Mapping SourceColumn="WeldingStandard" DataSetColumn="WeldingStandard" />
+              <Mapping SourceColumn="WeldingStandardRestrict" DataSetColumn="WeldingStandardRestrict" />
+              <Mapping SourceColumn="ShipRestrict" DataSetColumn="ShipRestrict" />
+              <Mapping SourceColumn="TheorySeparate" DataSetColumn="TheorySeparate" />
+              <Mapping SourceColumn="TestCommitteeID" DataSetColumn="TestCommitteeID" />
+              <Mapping SourceColumn="ShipTestCommitteeID" DataSetColumn="ShipTestCommitteeID" />
+              <Mapping SourceColumn="WeldingProcessNo" DataSetColumn="WeldingProcessNo" />
+              <Mapping SourceColumn="WeldingProcess" DataSetColumn="WeldingProcess" />
+              <Mapping SourceColumn="ProtectGas" DataSetColumn="ProtectGas" />
+              <Mapping SourceColumn="KindofCCSWeldingProcess" DataSetColumn="KindofCCSWeldingProcess" />
+              <Mapping SourceColumn="ScopeofCCSWeldingProcess" DataSetColumn="ScopeofCCSWeldingProcess" />
+              <Mapping SourceColumn="Checked" DataSetColumn="Checked" />
+              <Mapping SourceColumn="isLocked" DataSetColumn="isLocked" />
+              <Mapping SourceColumn="TheoryExamineePresence" DataSetColumn="TheoryExamineePresence" />
+              <Mapping SourceColumn="TheoryMakeupStudent" DataSetColumn="TheoryMakeupStudent" />
+              <Mapping SourceColumn="TheoryMakeupExamineePresence" DataSetColumn="TheoryMakeupExamineePresence" />
+              <Mapping SourceColumn="SkillExamineePresence" DataSetColumn="SkillExamineePresence" />
+              <Mapping SourceColumn="SkillMakeupStudent" DataSetColumn="SkillMakeupStudent" />
+              <Mapping SourceColumn="SkillMakeupExamineePresence" DataSetColumn="SkillMakeupExamineePresence" />
+              <Mapping SourceColumn="CCSWeldingProcess" DataSetColumn="CCSWeldingProcess" />
+              <Mapping SourceColumn="ShipClassification" DataSetColumn="ShipClassification" />
+              <Mapping SourceColumn="KindofEmployerManagerUserName" DataSetColumn="KindofEmployerManagerUserName" />
+              <Mapping SourceColumn="KindofEmployerManagerName" DataSetColumn="KindofEmployerManagerName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="WelderIssueStudentQCRegistrationNoTableAdapter" GeneratorDataComponentClassName="WelderIssueStudentQCRegistrationNoTableAdapter" Name="WelderIssueStudentQCRegistrationNo" UserDataComponentName="WelderIssueStudentQCRegistrationNoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="zwjConn (Settings)" DbObjectName="ZCWelder.dbo.View_Union_Exam_WelderIssueStudentQCRegistrationNo" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT View_Union_Exam_WelderIssueStudentQCRegistrationNo.*
+FROM View_Union_Exam_WelderIssueStudentQCRegistrationNo</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="IssueNo" DataSetColumn="IssueNo" />
+              <Mapping SourceColumn="ExaminingNo" DataSetColumn="ExaminingNo" />
+              <Mapping SourceColumn="ShipClassificationAb" DataSetColumn="ShipClassificationAb" />
+              <Mapping SourceColumn="ShipboardNo" DataSetColumn="ShipboardNo" />
+              <Mapping SourceColumn="WeldingProcessAb" DataSetColumn="WeldingProcessAb" />
+              <Mapping SourceColumn="IdentificationCard" DataSetColumn="IdentificationCard" />
+              <Mapping SourceColumn="WelderName" DataSetColumn="WelderName" />
+              <Mapping SourceColumn="Sex" DataSetColumn="Sex" />
+              <Mapping SourceColumn="WelderEnglishName" DataSetColumn="WelderEnglishName" />
+              <Mapping SourceColumn="Schooling" DataSetColumn="Schooling" />
+              <Mapping SourceColumn="WeldingBeginning" DataSetColumn="WeldingBeginning" />
+              <Mapping SourceColumn="WelderEmployerHPID" DataSetColumn="WelderEmployerHPID" />
+              <Mapping SourceColumn="WelderDepartmentHPID" DataSetColumn="WelderDepartmentHPID" />
+              <Mapping SourceColumn="WelderWorkPlaceHPID" DataSetColumn="WelderWorkPlaceHPID" />
+              <Mapping SourceColumn="WelderLaborServiceTeamHPID" DataSetColumn="WelderLaborServiceTeamHPID" />
+              <Mapping SourceColumn="WelderWorkerID" DataSetColumn="WelderWorkerID" />
+              <Mapping SourceColumn="WelderRemark" DataSetColumn="WelderRemark" />
+              <Mapping SourceColumn="WelderEmployer" DataSetColumn="WelderEmployer" />
+              <Mapping SourceColumn="WelderEmployerEnglish" DataSetColumn="WelderEmployerEnglish" />
+              <Mapping SourceColumn="WelderShortenedEmployer" DataSetColumn="WelderShortenedEmployer" />
+              <Mapping SourceColumn="WelderEmployerGroup" DataSetColumn="WelderEmployerGroup" />
+              <Mapping SourceColumn="WelderDepartment" DataSetColumn="WelderDepartment" />
+              <Mapping SourceColumn="WelderDepartmentEnglish" DataSetColumn="WelderDepartmentEnglish" />
+              <Mapping SourceColumn="WelderShortenedDepartment" DataSetColumn="WelderShortenedDepartment" />
+              <Mapping SourceColumn="WelderWorkPlace" DataSetColumn="WelderWorkPlace" />
+              <Mapping SourceColumn="WelderWorkPlaceEnglish" DataSetColumn="WelderWorkPlaceEnglish" />
+              <Mapping SourceColumn="WelderShortenedWorkPlace" DataSetColumn="WelderShortenedWorkPlace" />
+              <Mapping SourceColumn="WelderLaborServiceTeam" DataSetColumn="WelderLaborServiceTeam" />
+              <Mapping SourceColumn="WelderShortenedLaborServiceTeam" DataSetColumn="WelderShortenedLaborServiceTeam" />
+              <Mapping SourceColumn="WelderLaborServiceTeamEnglish" DataSetColumn="WelderLaborServiceTeamEnglish" />
+              <Mapping SourceColumn="StudentKindofExam" DataSetColumn="StudentKindofExam" />
+              <Mapping SourceColumn="ExamSubjectID" DataSetColumn="ExamSubjectID" />
+              <Mapping SourceColumn="ExamSubjectCode" DataSetColumn="ExamSubjectCode" />
+              <Mapping SourceColumn="StudentMaterial" DataSetColumn="StudentMaterial" />
+              <Mapping SourceColumn="StudentDimensionofMaterial" DataSetColumn="StudentDimensionofMaterial" />
+              <Mapping SourceColumn="StudentWeldingConsumable" DataSetColumn="StudentWeldingConsumable" />
+              <Mapping SourceColumn="StudentThickness" DataSetColumn="StudentThickness" />
+              <Mapping SourceColumn="StudentExternalDiameter" DataSetColumn="StudentExternalDiameter" />
+              <Mapping SourceColumn="StudentRenderWeldingRodDiameter" DataSetColumn="StudentRenderWeldingRodDiameter" />
+              <Mapping SourceColumn="StudentWeldingRodDiameter" DataSetColumn="StudentWeldingRodDiameter" />
+              <Mapping SourceColumn="StudentCoverWeldingRodDiameter" DataSetColumn="StudentCoverWeldingRodDiameter" />
+              <Mapping SourceColumn="StudentAssemblage" DataSetColumn="StudentAssemblage" />
+              <Mapping SourceColumn="ExamStatus" DataSetColumn="ExamStatus" />
+              <Mapping SourceColumn="TheoryResult" DataSetColumn="TheoryResult" />
+              <Mapping SourceColumn="SkillResult" DataSetColumn="SkillResult" />
+              <Mapping SourceColumn="TheoryMakeupResult" DataSetColumn="TheoryMakeupResult" />
+              <Mapping SourceColumn="SkillMakeupResult" DataSetColumn="SkillMakeupResult" />
+              <Mapping SourceColumn="StudentMarked" DataSetColumn="StudentMarked" />
+              <Mapping SourceColumn="StudentRemark" DataSetColumn="StudentRemark" />
+              <Mapping SourceColumn="IssueStatus" DataSetColumn="IssueStatus" />
+              <Mapping SourceColumn="PlaceofTest" DataSetColumn="PlaceofTest" />
+              <Mapping SourceColumn="SignUpDate" DataSetColumn="SignUpDate" />
+              <Mapping SourceColumn="DateBeginningofTrain" DataSetColumn="DateBeginningofTrain" />
+              <Mapping SourceColumn="DateEndingofTrain" DataSetColumn="DateEndingofTrain" />
+              <Mapping SourceColumn="KindofEmployer" DataSetColumn="KindofEmployer" />
+              <Mapping SourceColumn="IssueEmployerHPID" DataSetColumn="IssueEmployerHPID" />
+              <Mapping SourceColumn="IssueKindofExam" DataSetColumn="IssueKindofExam" />
+              <Mapping SourceColumn="IssueMaterial" DataSetColumn="IssueMaterial" />
+              <Mapping SourceColumn="IssueDimensionofMaterial" DataSetColumn="IssueDimensionofMaterial" />
+              <Mapping SourceColumn="IssueWeldingConsumable" DataSetColumn="IssueWeldingConsumable" />
+              <Mapping SourceColumn="IssueThickness" DataSetColumn="IssueThickness" />
+              <Mapping SourceColumn="IssueExternalDiameter" DataSetColumn="IssueExternalDiameter" />
+              <Mapping SourceColumn="IssueRenderWeldingRodDiameter" DataSetColumn="IssueRenderWeldingRodDiameter" />
+              <Mapping SourceColumn="IssueWeldingRodDiameter" DataSetColumn="IssueWeldingRodDiameter" />
+              <Mapping SourceColumn="IssueCoverWeldingRodDiameter" DataSetColumn="IssueCoverWeldingRodDiameter" />
+              <Mapping SourceColumn="IssueAssemblage" DataSetColumn="IssueAssemblage" />
+              <Mapping SourceColumn="TheoryExamDate" DataSetColumn="TheoryExamDate" />
+              <Mapping SourceColumn="SkillExamDate" DataSetColumn="SkillExamDate" />
+              <Mapping SourceColumn="TheoryMakeupDate" DataSetColumn="TheoryMakeupDate" />
+              <Mapping SourceColumn="SkillMakeupDate" DataSetColumn="SkillMakeupDate" />
+              <Mapping SourceColumn="TheoryTeacherID" DataSetColumn="TheoryTeacherID" />
+              <Mapping SourceColumn="SkillTeacherID" DataSetColumn="SkillTeacherID" />
+              <Mapping SourceColumn="IssueQCTeacherID" DataSetColumn="IssueQCTeacherID" />
+              <Mapping SourceColumn="SupervisorID" DataSetColumn="SupervisorID" />
+              <Mapping SourceColumn="ArchiveTeacherID" DataSetColumn="ArchiveTeacherID" />
+              <Mapping SourceColumn="VisualTestDate" DataSetColumn="VisualTestDate" />
+              <Mapping SourceColumn="BendTestDate" DataSetColumn="BendTestDate" />
+              <Mapping SourceColumn="RTTestDate" DataSetColumn="RTTestDate" />
+              <Mapping SourceColumn="IssueIssuedOn" DataSetColumn="IssueIssuedOn" />
+              <Mapping SourceColumn="IssueSupervisionPlace" DataSetColumn="IssueSupervisionPlace" />
+              <Mapping SourceColumn="IssuePeriodofValidity" DataSetColumn="IssuePeriodofValidity" />
+              <Mapping SourceColumn="IssueRemark" DataSetColumn="IssueRemark" />
+              <Mapping SourceColumn="TheoryTeacherUserName" DataSetColumn="TheoryTeacherUserName" />
+              <Mapping SourceColumn="TheoryTeacherName" DataSetColumn="TheoryTeacherName" />
+              <Mapping SourceColumn="SkillTeacherUserName" DataSetColumn="SkillTeacherUserName" />
+              <Mapping SourceColumn="SkillTeacherName" DataSetColumn="SkillTeacherName" />
+              <Mapping SourceColumn="IssueQCTeacherUserName" DataSetColumn="IssueQCTeacherUserName" />
+              <Mapping SourceColumn="IssueQCTeacherName" DataSetColumn="IssueQCTeacherName" />
+              <Mapping SourceColumn="SupervisorUserName" DataSetColumn="SupervisorUserName" />
+              <Mapping SourceColumn="SupervisorName" DataSetColumn="SupervisorName" />
+              <Mapping SourceColumn="ArchiveTeacherUserName" DataSetColumn="ArchiveTeacherUserName" />
+              <Mapping SourceColumn="ArchiveTeacherName" DataSetColumn="ArchiveTeacherName" />
+              <Mapping SourceColumn="IssueEmployer" DataSetColumn="IssueEmployer" />
+              <Mapping SourceColumn="IssueEmployerEnglish" DataSetColumn="IssueEmployerEnglish" />
+              <Mapping SourceColumn="IssueShortenedEmployer" DataSetColumn="IssueShortenedEmployer" />
+              <Mapping SourceColumn="IssueEmployerGroup" DataSetColumn="IssueEmployerGroup" />
+              <Mapping SourceColumn="CertificateNo" DataSetColumn="CertificateNo" />
+              <Mapping SourceColumn="isQCValid" DataSetColumn="isQCValid" />
+              <Mapping SourceColumn="QCSubjectID" DataSetColumn="QCSubjectID" />
+              <Mapping SourceColumn="IssuedOn" DataSetColumn="IssuedOn" />
+              <Mapping SourceColumn="ValidUntil" DataSetColumn="ValidUntil" />
+              <Mapping SourceColumn="SupervisionPlace" DataSetColumn="SupervisionPlace" />
+              <Mapping SourceColumn="SupervisionFirst" DataSetColumn="SupervisionFirst" />
+              <Mapping SourceColumn="SupervisionSecond" DataSetColumn="SupervisionSecond" />
+              <Mapping SourceColumn="SupervisionThird" DataSetColumn="SupervisionThird" />
+              <Mapping SourceColumn="SupervisionFourth" DataSetColumn="SupervisionFourth" />
+              <Mapping SourceColumn="SupervisionFifth" DataSetColumn="SupervisionFifth" />
+              <Mapping SourceColumn="SupervisionSixth" DataSetColumn="SupervisionSixth" />
+              <Mapping SourceColumn="SupervisionSeventh" DataSetColumn="SupervisionSeventh" />
+              <Mapping SourceColumn="SupervisionEighth" DataSetColumn="SupervisionEighth" />
+              <Mapping SourceColumn="SupervisionDateFirst" DataSetColumn="SupervisionDateFirst" />
+              <Mapping SourceColumn="SupervisionDateSecond" DataSetColumn="SupervisionDateSecond" />
+              <Mapping SourceColumn="SupervisionDateThird" DataSetColumn="SupervisionDateThird" />
+              <Mapping SourceColumn="SupervisionDateFourth" DataSetColumn="SupervisionDateFourth" />
+              <Mapping SourceColumn="SupervisionDateFifth" DataSetColumn="SupervisionDateFifth" />
+              <Mapping SourceColumn="SupervisionDateSixth" DataSetColumn="SupervisionDateSixth" />
+              <Mapping SourceColumn="SupervisionDateSeventh" DataSetColumn="SupervisionDateSeventh" />
+              <Mapping SourceColumn="SupervisionDateEighth" DataSetColumn="SupervisionDateEighth" />
+              <Mapping SourceColumn="DateofProlongation" DataSetColumn="DateofProlongation" />
+              <Mapping SourceColumn="QCRemark" DataSetColumn="QCRemark" />
+              <Mapping SourceColumn="ISOAssemblage" DataSetColumn="ISOAssemblage" />
+              <Mapping SourceColumn="ISOWeldingSide" DataSetColumn="ISOWeldingSide" />
+              <Mapping SourceColumn="WeldingSide" DataSetColumn="WeldingSide" />
+              <Mapping SourceColumn="ScopeofCCSAssemblage" DataSetColumn="ScopeofCCSAssemblage" />
+              <Mapping SourceColumn="ScopeofISOAssemblage" DataSetColumn="ScopeofISOAssemblage" />
+              <Mapping SourceColumn="MaterialCCSGroupAb" DataSetColumn="MaterialCCSGroupAb" />
+              <Mapping SourceColumn="MaterialISOGroupAb" DataSetColumn="MaterialISOGroupAb" />
+              <Mapping SourceColumn="MaterialCCSGroup" DataSetColumn="MaterialCCSGroup" />
+              <Mapping SourceColumn="ScopeofMaterialCCSGroup" DataSetColumn="ScopeofMaterialCCSGroup" />
+              <Mapping SourceColumn="MaterialISOGroup" DataSetColumn="MaterialISOGroup" />
+              <Mapping SourceColumn="ScopeofMaterialISOGroup" DataSetColumn="ScopeofMaterialISOGroup" />
+              <Mapping SourceColumn="WeldingConsumableCCSGroupAb" DataSetColumn="WeldingConsumableCCSGroupAb" />
+              <Mapping SourceColumn="WeldingConsumableISOGroupAb" DataSetColumn="WeldingConsumableISOGroupAb" />
+              <Mapping SourceColumn="WeldingConsumableCCSGroup" DataSetColumn="WeldingConsumableCCSGroup" />
+              <Mapping SourceColumn="ScopeofWeldingConsumableCCSGroup" DataSetColumn="ScopeofWeldingConsumableCCSGroup" />
+              <Mapping SourceColumn="WeldingConsumableISOGroup" DataSetColumn="WeldingConsumableISOGroup" />
+              <Mapping SourceColumn="WeldingProject" DataSetColumn="WeldingProject" />
+              <Mapping SourceColumn="WeldingProjectAb" DataSetColumn="WeldingProjectAb" />
+              <Mapping SourceColumn="ScopeofWeldingProject" DataSetColumn="ScopeofWeldingProject" />
+              <Mapping SourceColumn="JointType" DataSetColumn="JointType" />
+              <Mapping SourceColumn="WorkPieceType" DataSetColumn="WorkPieceType" />
+              <Mapping SourceColumn="WeldingClass" DataSetColumn="WeldingClass" />
+              <Mapping SourceColumn="WeldingClassAb" DataSetColumn="WeldingClassAb" />
+              <Mapping SourceColumn="ScopeofWeldingClass" DataSetColumn="ScopeofWeldingClass" />
+              <Mapping SourceColumn="SubjectClass" DataSetColumn="SubjectClass" />
+              <Mapping SourceColumn="Subject" DataSetColumn="Subject" />
+              <Mapping SourceColumn="ScopeofSubject" DataSetColumn="ScopeofSubject" />
+              <Mapping SourceColumn="QCWeldingProject" DataSetColumn="QCWeldingProject" />
+              <Mapping SourceColumn="QCWeldingProjectAb" DataSetColumn="QCWeldingProjectAb" />
+              <Mapping SourceColumn="QCScopeofWeldingProject" DataSetColumn="QCScopeofWeldingProject" />
+              <Mapping SourceColumn="QCJointType" DataSetColumn="QCJointType" />
+              <Mapping SourceColumn="QCWorkPieceType" DataSetColumn="QCWorkPieceType" />
+              <Mapping SourceColumn="QCWeldingClass" DataSetColumn="QCWeldingClass" />
+              <Mapping SourceColumn="QCWeldingClassAb" DataSetColumn="QCWeldingClassAb" />
+              <Mapping SourceColumn="QCScopeofWeldingClass" DataSetColumn="QCScopeofWeldingClass" />
+              <Mapping SourceColumn="QCSubjectClass" DataSetColumn="QCSubjectClass" />
+              <Mapping SourceColumn="QCSubject" DataSetColumn="QCSubject" />
+              <Mapping SourceColumn="QCScopeofSubject" DataSetColumn="QCScopeofSubject" />
+              <Mapping SourceColumn="WeldingStandard" DataSetColumn="WeldingStandard" />
+              <Mapping SourceColumn="WeldingStandardRestrict" DataSetColumn="WeldingStandardRestrict" />
+              <Mapping SourceColumn="TheorySeparate" DataSetColumn="TheorySeparate" />
+              <Mapping SourceColumn="TestCommitteeID" DataSetColumn="TestCommitteeID" />
+              <Mapping SourceColumn="ShipRestrict" DataSetColumn="ShipRestrict" />
+              <Mapping SourceColumn="ShipTestCommitteeID" DataSetColumn="ShipTestCommitteeID" />
+              <Mapping SourceColumn="WeldingProcessNo" DataSetColumn="WeldingProcessNo" />
+              <Mapping SourceColumn="WeldingProcess" DataSetColumn="WeldingProcess" />
+              <Mapping SourceColumn="ProtectGas" DataSetColumn="ProtectGas" />
+              <Mapping SourceColumn="KindofCCSWeldingProcess" DataSetColumn="KindofCCSWeldingProcess" />
+              <Mapping SourceColumn="ScopeofCCSWeldingProcess" DataSetColumn="ScopeofCCSWeldingProcess" />
+              <Mapping SourceColumn="ISOJointType" DataSetColumn="ISOJointType" />
+              <Mapping SourceColumn="QCISOJointType" DataSetColumn="QCISOJointType" />
+              <Mapping SourceColumn="ISOWorkPieceType" DataSetColumn="ISOWorkPieceType" />
+              <Mapping SourceColumn="QCISOWorkPieceType" DataSetColumn="QCISOWorkPieceType" />
+              <Mapping SourceColumn="RegistrationNo" DataSetColumn="RegistrationNo" />
+              <Mapping SourceColumn="PeriodofValidity" DataSetColumn="PeriodofValidity1" />
+              <Mapping SourceColumn="OriginalPeriod" DataSetColumn="OriginalPeriod1" />
+              <Mapping SourceColumn="PeriodofProlongation" DataSetColumn="PeriodofProlongation1" />
+              <Mapping SourceColumn="TheoryResultNeed" DataSetColumn="TheoryResultNeed" />
+              <Mapping SourceColumn="SkillResultNeed" DataSetColumn="SkillResultNeed" />
+              <Mapping SourceColumn="PassScore" DataSetColumn="PassScore" />
+              <Mapping SourceColumn="CCSWeldingProcess" DataSetColumn="CCSWeldingProcess" />
+              <Mapping SourceColumn="CCSSubject" DataSetColumn="CCSSubject" />
+              <Mapping SourceColumn="CCSSubjectTestNo" DataSetColumn="CCSSubjectTestNo" />
+              <Mapping SourceColumn="QCCCSSubject" DataSetColumn="QCCCSSubject" />
+              <Mapping SourceColumn="QCCCSSubjectTestNo" DataSetColumn="QCCCSSubjectTestNo" />
+              <Mapping SourceColumn="KindofEmployerManagerUserName" DataSetColumn="KindofEmployerManagerUserName" />
+              <Mapping SourceColumn="KindofEmployerManagerName" DataSetColumn="KindofEmployerManagerName" />
+              <Mapping SourceColumn="MaterialCCSGroupItemName" DataSetColumn="MaterialCCSGroupItemName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Exam" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet_Exam" msprop:Generator_DataSetName="DataSet_Exam">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Issue" msprop:Generator_UserTableName="Issue" msprop:Generator_RowDeletedName="IssueRowDeleted" msprop:Generator_RowChangedName="IssueRowChanged" msprop:Generator_RowClassName="IssueRow" msprop:Generator_RowChangingName="IssueRowChanging" msprop:Generator_RowEvArgName="IssueRowChangeEvent" msprop:Generator_RowEvHandlerName="IssueRowChangeEventHandler" msprop:Generator_TableClassName="IssueDataTable" msprop:Generator_TableVarName="tableIssue" msprop:Generator_RowDeletingName="IssueRowDeleting" msprop:Generator_TablePropName="Issue">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssueNo" msprop:Generator_UserColumnName="IssueNo" msprop:Generator_ColumnPropNameInRow="IssueNo" msprop:Generator_ColumnVarNameInTable="columnIssueNo" msprop:Generator_ColumnPropNameInTable="IssueNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipClassificationAb" msprop:Generator_UserColumnName="ShipClassificationAb" msprop:Generator_ColumnPropNameInRow="ShipClassificationAb" msprop:Generator_ColumnVarNameInTable="columnShipClassificationAb" msprop:Generator_ColumnPropNameInTable="ShipClassificationAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipboardNo" msprop:Generator_UserColumnName="ShipboardNo" msprop:Generator_ColumnPropNameInRow="ShipboardNo" msprop:Generator_ColumnVarNameInTable="columnShipboardNo" msprop:Generator_ColumnPropNameInTable="ShipboardNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProcessAb" msprop:Generator_UserColumnName="WeldingProcessAb" msprop:Generator_ColumnPropNameInRow="WeldingProcessAb" msprop:Generator_ColumnVarNameInTable="columnWeldingProcessAb" msprop:Generator_ColumnPropNameInTable="WeldingProcessAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueStatus" msprop:Generator_UserColumnName="IssueStatus" msprop:Generator_ColumnPropNameInRow="IssueStatus" msprop:Generator_ColumnVarNameInTable="columnIssueStatus" msprop:Generator_ColumnPropNameInTable="IssueStatusColumn" type="xs:int" />
+              <xs:element name="PlaceofTest" msprop:Generator_UserColumnName="PlaceofTest" msprop:Generator_ColumnPropNameInRow="PlaceofTest" msprop:Generator_ColumnVarNameInTable="columnPlaceofTest" msprop:Generator_ColumnPropNameInTable="PlaceofTestColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SignUpDate" msprop:Generator_UserColumnName="SignUpDate" msprop:Generator_ColumnPropNameInRow="SignUpDate" msprop:Generator_ColumnVarNameInTable="columnSignUpDate" msprop:Generator_ColumnPropNameInTable="SignUpDateColumn" type="xs:dateTime" />
+              <xs:element name="DateBeginningofTrain" msprop:Generator_UserColumnName="DateBeginningofTrain" msprop:Generator_ColumnPropNameInRow="DateBeginningofTrain" msprop:Generator_ColumnVarNameInTable="columnDateBeginningofTrain" msprop:Generator_ColumnPropNameInTable="DateBeginningofTrainColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateEndingofTrain" msprop:Generator_UserColumnName="DateEndingofTrain" msprop:Generator_ColumnPropNameInRow="DateEndingofTrain" msprop:Generator_ColumnVarNameInTable="columnDateEndingofTrain" msprop:Generator_ColumnPropNameInTable="DateEndingofTrainColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KindofEmployer" msprop:Generator_UserColumnName="KindofEmployer" msprop:Generator_ColumnPropNameInRow="KindofEmployer" msprop:Generator_ColumnVarNameInTable="columnKindofEmployer" msprop:Generator_ColumnPropNameInTable="KindofEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployerHPID" msprop:Generator_UserColumnName="IssueEmployerHPID" msprop:Generator_ColumnPropNameInRow="IssueEmployerHPID" msprop:Generator_ColumnVarNameInTable="columnIssueEmployerHPID" msprop:Generator_ColumnPropNameInTable="IssueEmployerHPIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueKindofExam" msprop:Generator_UserColumnName="IssueKindofExam" msprop:Generator_ColumnPropNameInRow="IssueKindofExam" msprop:Generator_ColumnVarNameInTable="columnIssueKindofExam" msprop:Generator_ColumnPropNameInTable="IssueKindofExamColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueMaterial" msprop:Generator_UserColumnName="IssueMaterial" msprop:Generator_ColumnPropNameInRow="IssueMaterial" msprop:Generator_ColumnVarNameInTable="columnIssueMaterial" msprop:Generator_ColumnPropNameInTable="IssueMaterialColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueDimensionofMaterial" msprop:Generator_UserColumnName="IssueDimensionofMaterial" msprop:Generator_ColumnPropNameInRow="IssueDimensionofMaterial" msprop:Generator_ColumnVarNameInTable="columnIssueDimensionofMaterial" msprop:Generator_ColumnPropNameInTable="IssueDimensionofMaterialColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueWeldingConsumable" msprop:Generator_UserColumnName="IssueWeldingConsumable" msprop:Generator_ColumnPropNameInRow="IssueWeldingConsumable" msprop:Generator_ColumnVarNameInTable="columnIssueWeldingConsumable" msprop:Generator_ColumnPropNameInTable="IssueWeldingConsumableColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueThickness" msprop:Generator_UserColumnName="IssueThickness" msprop:Generator_ColumnPropNameInRow="IssueThickness" msprop:Generator_ColumnVarNameInTable="columnIssueThickness" msprop:Generator_ColumnPropNameInTable="IssueThicknessColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueExternalDiameter" msprop:Generator_UserColumnName="IssueExternalDiameter" msprop:Generator_ColumnPropNameInRow="IssueExternalDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueExternalDiameter" msprop:Generator_ColumnPropNameInTable="IssueExternalDiameterColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueRenderWeldingRodDiameter" msprop:Generator_UserColumnName="IssueRenderWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="IssueRenderWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueRenderWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="IssueRenderWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="IssueWeldingRodDiameter" msprop:Generator_UserColumnName="IssueWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="IssueWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="IssueWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="IssueCoverWeldingRodDiameter" msprop:Generator_UserColumnName="IssueCoverWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="IssueCoverWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueCoverWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="IssueCoverWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="IssueAssemblage" msprop:Generator_UserColumnName="IssueAssemblage" msprop:Generator_ColumnPropNameInRow="IssueAssemblage" msprop:Generator_ColumnVarNameInTable="columnIssueAssemblage" msprop:Generator_ColumnPropNameInTable="IssueAssemblageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TheoryExamDate" msprop:Generator_UserColumnName="TheoryExamDate" msprop:Generator_ColumnPropNameInRow="TheoryExamDate" msprop:Generator_ColumnVarNameInTable="columnTheoryExamDate" msprop:Generator_ColumnPropNameInTable="TheoryExamDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SkillExamDate" msprop:Generator_UserColumnName="SkillExamDate" msprop:Generator_ColumnPropNameInRow="SkillExamDate" msprop:Generator_ColumnVarNameInTable="columnSkillExamDate" msprop:Generator_ColumnPropNameInTable="SkillExamDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TheoryMakeupDate" msprop:Generator_UserColumnName="TheoryMakeupDate" msprop:Generator_ColumnPropNameInRow="TheoryMakeupDate" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupDate" msprop:Generator_ColumnPropNameInTable="TheoryMakeupDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SkillMakeupDate" msprop:Generator_UserColumnName="SkillMakeupDate" msprop:Generator_ColumnPropNameInRow="SkillMakeupDate" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupDate" msprop:Generator_ColumnPropNameInTable="SkillMakeupDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TheoryTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TheoryTeacherID" msprop:Generator_ColumnPropNameInRow="TheoryTeacherID" msprop:Generator_ColumnVarNameInTable="columnTheoryTeacherID" msprop:Generator_ColumnPropNameInTable="TheoryTeacherIDColumn" type="xs:string" />
+              <xs:element name="SkillTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="SkillTeacherID" msprop:Generator_ColumnPropNameInRow="SkillTeacherID" msprop:Generator_ColumnVarNameInTable="columnSkillTeacherID" msprop:Generator_ColumnPropNameInTable="SkillTeacherIDColumn" type="xs:string" />
+              <xs:element name="IssueQCTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="IssueQCTeacherID" msprop:Generator_ColumnPropNameInRow="IssueQCTeacherID" msprop:Generator_ColumnVarNameInTable="columnIssueQCTeacherID" msprop:Generator_ColumnPropNameInTable="IssueQCTeacherIDColumn" type="xs:string" />
+              <xs:element name="SupervisorID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="SupervisorID" msprop:Generator_ColumnPropNameInRow="SupervisorID" msprop:Generator_ColumnVarNameInTable="columnSupervisorID" msprop:Generator_ColumnPropNameInTable="SupervisorIDColumn" type="xs:string" />
+              <xs:element name="ArchiveTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ArchiveTeacherID" msprop:Generator_ColumnPropNameInRow="ArchiveTeacherID" msprop:Generator_ColumnVarNameInTable="columnArchiveTeacherID" msprop:Generator_ColumnPropNameInTable="ArchiveTeacherIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VisualTestDate" msprop:Generator_UserColumnName="VisualTestDate" msprop:Generator_ColumnPropNameInRow="VisualTestDate" msprop:Generator_ColumnVarNameInTable="columnVisualTestDate" msprop:Generator_ColumnPropNameInTable="VisualTestDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BendTestDate" msprop:Generator_UserColumnName="BendTestDate" msprop:Generator_ColumnPropNameInRow="BendTestDate" msprop:Generator_ColumnVarNameInTable="columnBendTestDate" msprop:Generator_ColumnPropNameInTable="BendTestDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RTTestDate" msprop:Generator_UserColumnName="RTTestDate" msprop:Generator_ColumnPropNameInRow="RTTestDate" msprop:Generator_ColumnVarNameInTable="columnRTTestDate" msprop:Generator_ColumnPropNameInTable="RTTestDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IssueIssuedOn" msprop:Generator_UserColumnName="IssueIssuedOn" msprop:Generator_ColumnPropNameInRow="IssueIssuedOn" msprop:Generator_ColumnVarNameInTable="columnIssueIssuedOn" msprop:Generator_ColumnPropNameInTable="IssueIssuedOnColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IssueSupervisionPlace" msprop:Generator_UserColumnName="IssueSupervisionPlace" msprop:Generator_ColumnPropNameInRow="IssueSupervisionPlace" msprop:Generator_ColumnVarNameInTable="columnIssueSupervisionPlace" msprop:Generator_ColumnPropNameInTable="IssueSupervisionPlaceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssuePeriodofValidity" msprop:Generator_UserColumnName="IssuePeriodofValidity" msprop:Generator_ColumnPropNameInRow="IssuePeriodofValidity" msprop:Generator_ColumnVarNameInTable="columnIssuePeriodofValidity" msprop:Generator_ColumnPropNameInTable="IssuePeriodofValidityColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IssueRemark" msprop:Generator_UserColumnName="IssueRemark" msprop:Generator_ColumnPropNameInRow="IssueRemark" msprop:Generator_ColumnVarNameInTable="columnIssueRemark" msprop:Generator_ColumnPropNameInTable="IssueRemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Student" msprop:Generator_UserColumnName="Student" msprop:Generator_ColumnPropNameInRow="Student" msprop:Generator_ColumnVarNameInTable="columnStudent" msprop:Generator_ColumnPropNameInTable="StudentColumn" type="xs:int" />
+              <xs:element name="TheoryStudent" msprop:Generator_UserColumnName="TheoryStudent" msprop:Generator_ColumnPropNameInRow="TheoryStudent" msprop:Generator_ColumnVarNameInTable="columnTheoryStudent" msprop:Generator_ColumnPropNameInTable="TheoryStudentColumn" type="xs:int" />
+              <xs:element name="TheoryTrained" msprop:Generator_UserColumnName="TheoryTrained" msprop:Generator_ColumnPropNameInRow="TheoryTrained" msprop:Generator_ColumnVarNameInTable="columnTheoryTrained" msprop:Generator_ColumnPropNameInTable="TheoryTrainedColumn" type="xs:int" />
+              <xs:element name="TheoryExaminee" msprop:Generator_UserColumnName="TheoryExaminee" msprop:Generator_ColumnPropNameInRow="TheoryExaminee" msprop:Generator_ColumnVarNameInTable="columnTheoryExaminee" msprop:Generator_ColumnPropNameInTable="TheoryExamineeColumn" type="xs:int" />
+              <xs:element name="TheoryPresenceRatio" msprop:Generator_UserColumnName="TheoryPresenceRatio" msprop:Generator_ColumnPropNameInRow="TheoryPresenceRatio" msprop:Generator_ColumnVarNameInTable="columnTheoryPresenceRatio" msprop:Generator_ColumnPropNameInTable="TheoryPresenceRatioColumn" type="xs:float" />
+              <xs:element name="TheoryPass" msprop:Generator_UserColumnName="TheoryPass" msprop:Generator_ColumnPropNameInRow="TheoryPass" msprop:Generator_ColumnVarNameInTable="columnTheoryPass" msprop:Generator_ColumnPropNameInTable="TheoryPassColumn" type="xs:int" />
+              <xs:element name="TheoryPercent" msprop:Generator_UserColumnName="TheoryPercent" msprop:Generator_ColumnPropNameInRow="TheoryPercent" msprop:Generator_ColumnVarNameInTable="columnTheoryPercent" msprop:Generator_ColumnPropNameInTable="TheoryPercentColumn" type="xs:float" />
+              <xs:element name="TheoryMakeupTrained" msprop:Generator_UserColumnName="TheoryMakeupTrained" msprop:Generator_ColumnPropNameInRow="TheoryMakeupTrained" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupTrained" msprop:Generator_ColumnPropNameInTable="TheoryMakeupTrainedColumn" type="xs:int" />
+              <xs:element name="TheoryMakeupExaminee" msprop:Generator_UserColumnName="TheoryMakeupExaminee" msprop:Generator_ColumnPropNameInRow="TheoryMakeupExaminee" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupExaminee" msprop:Generator_ColumnPropNameInTable="TheoryMakeupExamineeColumn" type="xs:int" />
+              <xs:element name="TheoryMakeupPresenceRatio" msprop:Generator_UserColumnName="TheoryMakeupPresenceRatio" msprop:Generator_ColumnPropNameInRow="TheoryMakeupPresenceRatio" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupPresenceRatio" msprop:Generator_ColumnPropNameInTable="TheoryMakeupPresenceRatioColumn" type="xs:float" />
+              <xs:element name="TheoryMakeupPass" msprop:Generator_UserColumnName="TheoryMakeupPass" msprop:Generator_ColumnPropNameInRow="TheoryMakeupPass" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupPass" msprop:Generator_ColumnPropNameInTable="TheoryMakeupPassColumn" type="xs:int" />
+              <xs:element name="TheoryMakeupPercent" msprop:Generator_UserColumnName="TheoryMakeupPercent" msprop:Generator_ColumnPropNameInRow="TheoryMakeupPercent" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupPercent" msprop:Generator_ColumnPropNameInTable="TheoryMakeupPercentColumn" type="xs:float" />
+              <xs:element name="TheoryPassAll" msprop:Generator_UserColumnName="TheoryPassAll" msprop:Generator_ColumnPropNameInRow="TheoryPassAll" msprop:Generator_ColumnVarNameInTable="columnTheoryPassAll" msprop:Generator_ColumnPropNameInTable="TheoryPassAllColumn" type="xs:int" />
+              <xs:element name="TheoryPercentAll" msprop:Generator_UserColumnName="TheoryPercentAll" msprop:Generator_ColumnPropNameInRow="TheoryPercentAll" msprop:Generator_ColumnVarNameInTable="columnTheoryPercentAll" msprop:Generator_ColumnPropNameInTable="TheoryPercentAllColumn" type="xs:float" />
+              <xs:element name="SkillStudent" msprop:Generator_UserColumnName="SkillStudent" msprop:Generator_ColumnPropNameInRow="SkillStudent" msprop:Generator_ColumnVarNameInTable="columnSkillStudent" msprop:Generator_ColumnPropNameInTable="SkillStudentColumn" type="xs:int" />
+              <xs:element name="SkillTrained" msprop:Generator_UserColumnName="SkillTrained" msprop:Generator_ColumnPropNameInRow="SkillTrained" msprop:Generator_ColumnVarNameInTable="columnSkillTrained" msprop:Generator_ColumnPropNameInTable="SkillTrainedColumn" type="xs:int" />
+              <xs:element name="SkillExaminee" msprop:Generator_UserColumnName="SkillExaminee" msprop:Generator_ColumnPropNameInRow="SkillExaminee" msprop:Generator_ColumnVarNameInTable="columnSkillExaminee" msprop:Generator_ColumnPropNameInTable="SkillExamineeColumn" type="xs:int" />
+              <xs:element name="SkillPresenceRatio" msprop:Generator_UserColumnName="SkillPresenceRatio" msprop:Generator_ColumnPropNameInRow="SkillPresenceRatio" msprop:Generator_ColumnVarNameInTable="columnSkillPresenceRatio" msprop:Generator_ColumnPropNameInTable="SkillPresenceRatioColumn" type="xs:float" />
+              <xs:element name="SkillPass" msprop:Generator_UserColumnName="SkillPass" msprop:Generator_ColumnPropNameInRow="SkillPass" msprop:Generator_ColumnVarNameInTable="columnSkillPass" msprop:Generator_ColumnPropNameInTable="SkillPassColumn" type="xs:int" />
+              <xs:element name="SkillPercent" msprop:Generator_UserColumnName="SkillPercent" msprop:Generator_ColumnPropNameInRow="SkillPercent" msprop:Generator_ColumnVarNameInTable="columnSkillPercent" msprop:Generator_ColumnPropNameInTable="SkillPercentColumn" type="xs:float" />
+              <xs:element name="SkillMakeupTrained" msprop:Generator_UserColumnName="SkillMakeupTrained" msprop:Generator_ColumnPropNameInRow="SkillMakeupTrained" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupTrained" msprop:Generator_ColumnPropNameInTable="SkillMakeupTrainedColumn" type="xs:int" />
+              <xs:element name="SkillMakeupExaminee" msprop:Generator_UserColumnName="SkillMakeupExaminee" msprop:Generator_ColumnPropNameInRow="SkillMakeupExaminee" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupExaminee" msprop:Generator_ColumnPropNameInTable="SkillMakeupExamineeColumn" type="xs:int" />
+              <xs:element name="SkillMakeupPresenceRatio" msprop:Generator_UserColumnName="SkillMakeupPresenceRatio" msprop:Generator_ColumnPropNameInRow="SkillMakeupPresenceRatio" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupPresenceRatio" msprop:Generator_ColumnPropNameInTable="SkillMakeupPresenceRatioColumn" type="xs:float" />
+              <xs:element name="SkillMakeupPass" msprop:Generator_UserColumnName="SkillMakeupPass" msprop:Generator_ColumnPropNameInRow="SkillMakeupPass" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupPass" msprop:Generator_ColumnPropNameInTable="SkillMakeupPassColumn" type="xs:int" />
+              <xs:element name="SkillMakeupPercent" msprop:Generator_UserColumnName="SkillMakeupPercent" msprop:Generator_ColumnPropNameInRow="SkillMakeupPercent" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupPercent" msprop:Generator_ColumnPropNameInTable="SkillMakeupPercentColumn" type="xs:float" />
+              <xs:element name="SkillPassAll" msprop:Generator_UserColumnName="SkillPassAll" msprop:Generator_ColumnPropNameInRow="SkillPassAll" msprop:Generator_ColumnVarNameInTable="columnSkillPassAll" msprop:Generator_ColumnPropNameInTable="SkillPassAllColumn" type="xs:int" />
+              <xs:element name="SkillPercentAll" msprop:Generator_UserColumnName="SkillPercentAll" msprop:Generator_ColumnPropNameInRow="SkillPercentAll" msprop:Generator_ColumnVarNameInTable="columnSkillPercentAll" msprop:Generator_ColumnPropNameInTable="SkillPercentAllColumn" type="xs:float" />
+              <xs:element name="PassPercentAll" msprop:Generator_UserColumnName="PassPercentAll" msprop:Generator_ColumnPropNameInRow="PassPercentAll" msprop:Generator_ColumnVarNameInTable="columnPassPercentAll" msprop:Generator_ColumnPropNameInTable="PassPercentAllColumn" type="xs:float" />
+              <xs:element name="SkillOne" msprop:Generator_UserColumnName="SkillOne" msprop:Generator_ColumnPropNameInRow="SkillOne" msprop:Generator_ColumnVarNameInTable="columnSkillOne" msprop:Generator_ColumnPropNameInTable="SkillOneColumn" type="xs:int" />
+              <xs:element name="SkillTwo" msprop:Generator_UserColumnName="SkillTwo" msprop:Generator_ColumnPropNameInRow="SkillTwo" msprop:Generator_ColumnVarNameInTable="columnSkillTwo" msprop:Generator_ColumnPropNameInTable="SkillTwoColumn" type="xs:int" />
+              <xs:element name="SkillThree" msprop:Generator_UserColumnName="SkillThree" msprop:Generator_ColumnPropNameInRow="SkillThree" msprop:Generator_ColumnVarNameInTable="columnSkillThree" msprop:Generator_ColumnPropNameInTable="SkillThreeColumn" type="xs:int" />
+              <xs:element name="SkillFour" msprop:Generator_UserColumnName="SkillFour" msprop:Generator_ColumnPropNameInRow="SkillFour" msprop:Generator_ColumnVarNameInTable="columnSkillFour" msprop:Generator_ColumnPropNameInTable="SkillFourColumn" type="xs:int" />
+              <xs:element name="SkillFive" msprop:Generator_UserColumnName="SkillFive" msprop:Generator_ColumnPropNameInRow="SkillFive" msprop:Generator_ColumnVarNameInTable="columnSkillFive" msprop:Generator_ColumnPropNameInTable="SkillFiveColumn" type="xs:int" />
+              <xs:element name="SkillSix" msprop:Generator_UserColumnName="SkillSix" msprop:Generator_ColumnPropNameInRow="SkillSix" msprop:Generator_ColumnVarNameInTable="columnSkillSix" msprop:Generator_ColumnPropNameInTable="SkillSixColumn" type="xs:int" />
+              <xs:element name="SkillTW" msprop:Generator_UserColumnName="SkillTW" msprop:Generator_ColumnPropNameInRow="SkillTW" msprop:Generator_ColumnVarNameInTable="columnSkillTW" msprop:Generator_ColumnPropNameInTable="SkillTWColumn" type="xs:int" />
+              <xs:element name="SkillOther" msprop:Generator_UserColumnName="SkillOther" msprop:Generator_ColumnPropNameInRow="SkillOther" msprop:Generator_ColumnVarNameInTable="columnSkillOther" msprop:Generator_ColumnPropNameInTable="SkillOtherColumn" type="xs:int" />
+              <xs:element name="DateofAdd" msprop:Generator_UserColumnName="DateofAdd" msprop:Generator_ColumnPropNameInRow="DateofAdd" msprop:Generator_ColumnVarNameInTable="columnDateofAdd" msprop:Generator_ColumnPropNameInTable="DateofAddColumn" type="xs:dateTime" />
+              <xs:element name="DateofModify" msprop:Generator_UserColumnName="DateofModify" msprop:Generator_ColumnPropNameInRow="DateofModify" msprop:Generator_ColumnVarNameInTable="columnDateofModify" msprop:Generator_ColumnPropNameInTable="DateofModifyColumn" type="xs:dateTime" />
+              <xs:element name="TheoryTeacherUserName" msprop:Generator_UserColumnName="TheoryTeacherUserName" msprop:Generator_ColumnPropNameInRow="TheoryTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnTheoryTeacherUserName" msprop:Generator_ColumnPropNameInTable="TheoryTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TheoryTeacherName" msprop:Generator_UserColumnName="TheoryTeacherName" msprop:Generator_ColumnPropNameInRow="TheoryTeacherName" msprop:Generator_ColumnVarNameInTable="columnTheoryTeacherName" msprop:Generator_ColumnPropNameInTable="TheoryTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SkillTeacherUserName" msprop:Generator_UserColumnName="SkillTeacherUserName" msprop:Generator_ColumnPropNameInRow="SkillTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnSkillTeacherUserName" msprop:Generator_ColumnPropNameInTable="SkillTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SkillTeacherName" msprop:Generator_UserColumnName="SkillTeacherName" msprop:Generator_ColumnPropNameInRow="SkillTeacherName" msprop:Generator_ColumnVarNameInTable="columnSkillTeacherName" msprop:Generator_ColumnPropNameInTable="SkillTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueQCTeacherUserName" msprop:Generator_UserColumnName="IssueQCTeacherUserName" msprop:Generator_ColumnPropNameInRow="IssueQCTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnIssueQCTeacherUserName" msprop:Generator_ColumnPropNameInTable="IssueQCTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueQCTeacherName" msprop:Generator_UserColumnName="IssueQCTeacherName" msprop:Generator_ColumnPropNameInRow="IssueQCTeacherName" msprop:Generator_ColumnVarNameInTable="columnIssueQCTeacherName" msprop:Generator_ColumnPropNameInTable="IssueQCTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupervisorUserName" msprop:Generator_UserColumnName="SupervisorUserName" msprop:Generator_ColumnPropNameInRow="SupervisorUserName" msprop:Generator_ColumnVarNameInTable="columnSupervisorUserName" msprop:Generator_ColumnPropNameInTable="SupervisorUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupervisorName" msprop:Generator_UserColumnName="SupervisorName" msprop:Generator_ColumnPropNameInRow="SupervisorName" msprop:Generator_ColumnVarNameInTable="columnSupervisorName" msprop:Generator_ColumnPropNameInTable="SupervisorNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArchiveTeacherUserName" msprop:Generator_UserColumnName="ArchiveTeacherUserName" msprop:Generator_ColumnPropNameInRow="ArchiveTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnArchiveTeacherUserName" msprop:Generator_ColumnPropNameInTable="ArchiveTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArchiveTeacherName" msprop:Generator_UserColumnName="ArchiveTeacherName" msprop:Generator_ColumnPropNameInRow="ArchiveTeacherName" msprop:Generator_ColumnVarNameInTable="columnArchiveTeacherName" msprop:Generator_ColumnPropNameInTable="ArchiveTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployer" msprop:Generator_UserColumnName="IssueEmployer" msprop:Generator_ColumnPropNameInRow="IssueEmployer" msprop:Generator_ColumnVarNameInTable="columnIssueEmployer" msprop:Generator_ColumnPropNameInTable="IssueEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployerEnglish" msprop:Generator_UserColumnName="IssueEmployerEnglish" msprop:Generator_ColumnPropNameInRow="IssueEmployerEnglish" msprop:Generator_ColumnVarNameInTable="columnIssueEmployerEnglish" msprop:Generator_ColumnPropNameInTable="IssueEmployerEnglishColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueShortenedEmployer" msprop:Generator_UserColumnName="IssueShortenedEmployer" msprop:Generator_ColumnPropNameInRow="IssueShortenedEmployer" msprop:Generator_ColumnVarNameInTable="columnIssueShortenedEmployer" msprop:Generator_ColumnPropNameInTable="IssueShortenedEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployerGroup" msprop:Generator_UserColumnName="IssueEmployerGroup" msprop:Generator_ColumnPropNameInRow="IssueEmployerGroup" msprop:Generator_ColumnVarNameInTable="columnIssueEmployerGroup" msprop:Generator_ColumnPropNameInTable="IssueEmployerGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingStandard" msprop:Generator_UserColumnName="WeldingStandard" msprop:Generator_ColumnPropNameInRow="WeldingStandard" msprop:Generator_ColumnVarNameInTable="columnWeldingStandard" msprop:Generator_ColumnPropNameInTable="WeldingStandardColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingStandardRestrict" msprop:Generator_UserColumnName="WeldingStandardRestrict" msprop:Generator_ColumnPropNameInRow="WeldingStandardRestrict" msprop:Generator_ColumnVarNameInTable="columnWeldingStandardRestrict" msprop:Generator_ColumnPropNameInTable="WeldingStandardRestrictColumn" type="xs:boolean" />
+              <xs:element name="ShipRestrict" msprop:Generator_UserColumnName="ShipRestrict" msprop:Generator_ColumnPropNameInRow="ShipRestrict" msprop:Generator_ColumnVarNameInTable="columnShipRestrict" msprop:Generator_ColumnPropNameInTable="ShipRestrictColumn" type="xs:boolean" />
+              <xs:element name="TheorySeparate" msprop:Generator_UserColumnName="TheorySeparate" msprop:Generator_ColumnPropNameInRow="TheorySeparate" msprop:Generator_ColumnVarNameInTable="columnTheorySeparate" msprop:Generator_ColumnPropNameInTable="TheorySeparateColumn" type="xs:boolean" />
+              <xs:element name="TestCommitteeID" msprop:Generator_UserColumnName="TestCommitteeID" msprop:Generator_ColumnPropNameInRow="TestCommitteeID" msprop:Generator_ColumnVarNameInTable="columnTestCommitteeID" msprop:Generator_ColumnPropNameInTable="TestCommitteeIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipTestCommitteeID" msprop:Generator_UserColumnName="ShipTestCommitteeID" msprop:Generator_ColumnPropNameInRow="ShipTestCommitteeID" msprop:Generator_ColumnVarNameInTable="columnShipTestCommitteeID" msprop:Generator_ColumnPropNameInTable="ShipTestCommitteeIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProcessNo" msprop:Generator_UserColumnName="WeldingProcessNo" msprop:Generator_ColumnPropNameInRow="WeldingProcessNo" msprop:Generator_ColumnVarNameInTable="columnWeldingProcessNo" msprop:Generator_ColumnPropNameInTable="WeldingProcessNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProcess" msprop:Generator_UserColumnName="WeldingProcess" msprop:Generator_ColumnPropNameInRow="WeldingProcess" msprop:Generator_ColumnVarNameInTable="columnWeldingProcess" msprop:Generator_ColumnPropNameInTable="WeldingProcessColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProtectGas" msprop:Generator_UserColumnName="ProtectGas" msprop:Generator_ColumnPropNameInRow="ProtectGas" msprop:Generator_ColumnVarNameInTable="columnProtectGas" msprop:Generator_ColumnPropNameInTable="ProtectGasColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KindofCCSWeldingProcess" msprop:Generator_UserColumnName="KindofCCSWeldingProcess" msprop:Generator_ColumnPropNameInRow="KindofCCSWeldingProcess" msprop:Generator_ColumnVarNameInTable="columnKindofCCSWeldingProcess" msprop:Generator_ColumnPropNameInTable="KindofCCSWeldingProcessColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofCCSWeldingProcess" msprop:Generator_UserColumnName="ScopeofCCSWeldingProcess" msprop:Generator_ColumnPropNameInRow="ScopeofCCSWeldingProcess" msprop:Generator_ColumnVarNameInTable="columnScopeofCCSWeldingProcess" msprop:Generator_ColumnPropNameInTable="ScopeofCCSWeldingProcessColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Checked" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Checked" msprop:Generator_ColumnVarNameInTable="columnChecked" msprop:Generator_ColumnPropNameInRow="Checked" msprop:Generator_ColumnPropNameInTable="CheckedColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="isLocked" msdata:ReadOnly="true" msprop:Generator_UserColumnName="isLocked" msprop:Generator_ColumnVarNameInTable="columnisLocked" msprop:Generator_ColumnPropNameInRow="isLocked" msprop:Generator_ColumnPropNameInTable="isLockedColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TheoryExamineePresence" msprop:Generator_UserColumnName="TheoryExamineePresence" msprop:Generator_ColumnVarNameInTable="columnTheoryExamineePresence" msprop:Generator_ColumnPropNameInRow="TheoryExamineePresence" msprop:Generator_ColumnPropNameInTable="TheoryExamineePresenceColumn" type="xs:int" />
+              <xs:element name="TheoryMakeupStudent" msprop:Generator_UserColumnName="TheoryMakeupStudent" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupStudent" msprop:Generator_ColumnPropNameInRow="TheoryMakeupStudent" msprop:Generator_ColumnPropNameInTable="TheoryMakeupStudentColumn" type="xs:int" />
+              <xs:element name="TheoryMakeupExamineePresence" msprop:Generator_UserColumnName="TheoryMakeupExamineePresence" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupExamineePresence" msprop:Generator_ColumnPropNameInRow="TheoryMakeupExamineePresence" msprop:Generator_ColumnPropNameInTable="TheoryMakeupExamineePresenceColumn" type="xs:int" />
+              <xs:element name="SkillExamineePresence" msprop:Generator_UserColumnName="SkillExamineePresence" msprop:Generator_ColumnVarNameInTable="columnSkillExamineePresence" msprop:Generator_ColumnPropNameInRow="SkillExamineePresence" msprop:Generator_ColumnPropNameInTable="SkillExamineePresenceColumn" type="xs:int" />
+              <xs:element name="SkillMakeupStudent" msprop:Generator_UserColumnName="SkillMakeupStudent" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupStudent" msprop:Generator_ColumnPropNameInRow="SkillMakeupStudent" msprop:Generator_ColumnPropNameInTable="SkillMakeupStudentColumn" type="xs:int" />
+              <xs:element name="SkillMakeupExamineePresence" msprop:Generator_UserColumnName="SkillMakeupExamineePresence" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupExamineePresence" msprop:Generator_ColumnPropNameInRow="SkillMakeupExamineePresence" msprop:Generator_ColumnPropNameInTable="SkillMakeupExamineePresenceColumn" type="xs:int" />
+              <xs:element name="CCSWeldingProcess" msprop:Generator_UserColumnName="CCSWeldingProcess" msprop:Generator_ColumnVarNameInTable="columnCCSWeldingProcess" msprop:Generator_ColumnPropNameInRow="CCSWeldingProcess" msprop:Generator_ColumnPropNameInTable="CCSWeldingProcessColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipClassification" msprop:Generator_UserColumnName="ShipClassification" msprop:Generator_ColumnVarNameInTable="columnShipClassification" msprop:Generator_ColumnPropNameInRow="ShipClassification" msprop:Generator_ColumnPropNameInTable="ShipClassificationColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KindofEmployerManagerUserName" msprop:Generator_UserColumnName="KindofEmployerManagerUserName" msprop:Generator_ColumnVarNameInTable="columnKindofEmployerManagerUserName" msprop:Generator_ColumnPropNameInRow="KindofEmployerManagerUserName" msprop:Generator_ColumnPropNameInTable="KindofEmployerManagerUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KindofEmployerManagerName" msprop:Generator_UserColumnName="KindofEmployerManagerName" msprop:Generator_ColumnVarNameInTable="columnKindofEmployerManagerName" msprop:Generator_ColumnPropNameInRow="KindofEmployerManagerName" msprop:Generator_ColumnPropNameInTable="KindofEmployerManagerNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="WelderIssueStudentQCRegistrationNo" msprop:Generator_UserTableName="WelderIssueStudentQCRegistrationNo" msprop:Generator_RowDeletedName="WelderIssueStudentQCRegistrationNoRowDeleted" msprop:Generator_RowChangedName="WelderIssueStudentQCRegistrationNoRowChanged" msprop:Generator_RowClassName="WelderIssueStudentQCRegistrationNoRow" msprop:Generator_RowChangingName="WelderIssueStudentQCRegistrationNoRowChanging" msprop:Generator_RowEvArgName="WelderIssueStudentQCRegistrationNoRowChangeEvent" msprop:Generator_RowEvHandlerName="WelderIssueStudentQCRegistrationNoRowChangeEventHandler" msprop:Generator_TableClassName="WelderIssueStudentQCRegistrationNoDataTable" msprop:Generator_TableVarName="tableWelderIssueStudentQCRegistrationNo" msprop:Generator_RowDeletingName="WelderIssueStudentQCRegistrationNoRowDeleting" msprop:Generator_TablePropName="WelderIssueStudentQCRegistrationNo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IssueNo" msprop:Generator_UserColumnName="IssueNo" msprop:Generator_ColumnPropNameInRow="IssueNo" msprop:Generator_ColumnVarNameInTable="columnIssueNo" msprop:Generator_ColumnPropNameInTable="IssueNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExaminingNo" msprop:Generator_UserColumnName="ExaminingNo" msprop:Generator_ColumnPropNameInRow="ExaminingNo" msprop:Generator_ColumnVarNameInTable="columnExaminingNo" msprop:Generator_ColumnPropNameInTable="ExaminingNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipClassificationAb" msprop:Generator_UserColumnName="ShipClassificationAb" msprop:Generator_ColumnPropNameInRow="ShipClassificationAb" msprop:Generator_ColumnVarNameInTable="columnShipClassificationAb" msprop:Generator_ColumnPropNameInTable="ShipClassificationAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipboardNo" msprop:Generator_UserColumnName="ShipboardNo" msprop:Generator_ColumnPropNameInRow="ShipboardNo" msprop:Generator_ColumnVarNameInTable="columnShipboardNo" msprop:Generator_ColumnPropNameInTable="ShipboardNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProcessAb" msprop:Generator_UserColumnName="WeldingProcessAb" msprop:Generator_ColumnPropNameInRow="WeldingProcessAb" msprop:Generator_ColumnVarNameInTable="columnWeldingProcessAb" msprop:Generator_ColumnPropNameInTable="WeldingProcessAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IdentificationCard" msprop:Generator_UserColumnName="IdentificationCard" msprop:Generator_ColumnPropNameInRow="IdentificationCard" msprop:Generator_ColumnVarNameInTable="columnIdentificationCard" msprop:Generator_ColumnPropNameInTable="IdentificationCardColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderName" msprop:Generator_UserColumnName="WelderName" msprop:Generator_ColumnPropNameInRow="WelderName" msprop:Generator_ColumnVarNameInTable="columnWelderName" msprop:Generator_ColumnPropNameInTable="WelderNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sex" msprop:Generator_UserColumnName="Sex" msprop:Generator_ColumnPropNameInRow="Sex" msprop:Generator_ColumnVarNameInTable="columnSex" msprop:Generator_ColumnPropNameInTable="SexColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderEnglishName" msprop:Generator_UserColumnName="WelderEnglishName" msprop:Generator_ColumnPropNameInRow="WelderEnglishName" msprop:Generator_ColumnVarNameInTable="columnWelderEnglishName" msprop:Generator_ColumnPropNameInTable="WelderEnglishNameColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Schooling" msprop:Generator_UserColumnName="Schooling" msprop:Generator_ColumnPropNameInRow="Schooling" msprop:Generator_ColumnVarNameInTable="columnSchooling" msprop:Generator_ColumnPropNameInTable="SchoolingColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingBeginning" msprop:Generator_UserColumnName="WeldingBeginning" msprop:Generator_ColumnPropNameInRow="WeldingBeginning" msprop:Generator_ColumnVarNameInTable="columnWeldingBeginning" msprop:Generator_ColumnPropNameInTable="WeldingBeginningColumn" type="xs:dateTime" />
+              <xs:element name="WelderEmployerHPID" msprop:Generator_UserColumnName="WelderEmployerHPID" msprop:Generator_ColumnPropNameInRow="WelderEmployerHPID" msprop:Generator_ColumnVarNameInTable="columnWelderEmployerHPID" msprop:Generator_ColumnPropNameInTable="WelderEmployerHPIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderDepartmentHPID" msprop:Generator_UserColumnName="WelderDepartmentHPID" msprop:Generator_ColumnPropNameInRow="WelderDepartmentHPID" msprop:Generator_ColumnVarNameInTable="columnWelderDepartmentHPID" msprop:Generator_ColumnPropNameInTable="WelderDepartmentHPIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderWorkPlaceHPID" msprop:Generator_UserColumnName="WelderWorkPlaceHPID" msprop:Generator_ColumnPropNameInRow="WelderWorkPlaceHPID" msprop:Generator_ColumnVarNameInTable="columnWelderWorkPlaceHPID" msprop:Generator_ColumnPropNameInTable="WelderWorkPlaceHPIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderLaborServiceTeamHPID" msprop:Generator_UserColumnName="WelderLaborServiceTeamHPID" msprop:Generator_ColumnPropNameInRow="WelderLaborServiceTeamHPID" msprop:Generator_ColumnVarNameInTable="columnWelderLaborServiceTeamHPID" msprop:Generator_ColumnPropNameInTable="WelderLaborServiceTeamHPIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="7" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderWorkerID" msprop:Generator_UserColumnName="WelderWorkerID" msprop:Generator_ColumnPropNameInRow="WelderWorkerID" msprop:Generator_ColumnVarNameInTable="columnWelderWorkerID" msprop:Generator_ColumnPropNameInTable="WelderWorkerIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderRemark" msprop:Generator_UserColumnName="WelderRemark" msprop:Generator_ColumnPropNameInRow="WelderRemark" msprop:Generator_ColumnVarNameInTable="columnWelderRemark" msprop:Generator_ColumnPropNameInTable="WelderRemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderEmployer" msprop:Generator_UserColumnName="WelderEmployer" msprop:Generator_ColumnPropNameInRow="WelderEmployer" msprop:Generator_ColumnVarNameInTable="columnWelderEmployer" msprop:Generator_ColumnPropNameInTable="WelderEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderEmployerEnglish" msprop:Generator_UserColumnName="WelderEmployerEnglish" msprop:Generator_ColumnPropNameInRow="WelderEmployerEnglish" msprop:Generator_ColumnVarNameInTable="columnWelderEmployerEnglish" msprop:Generator_ColumnPropNameInTable="WelderEmployerEnglishColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderShortenedEmployer" msprop:Generator_UserColumnName="WelderShortenedEmployer" msprop:Generator_ColumnPropNameInRow="WelderShortenedEmployer" msprop:Generator_ColumnVarNameInTable="columnWelderShortenedEmployer" msprop:Generator_ColumnPropNameInTable="WelderShortenedEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderEmployerGroup" msprop:Generator_UserColumnName="WelderEmployerGroup" msprop:Generator_ColumnPropNameInRow="WelderEmployerGroup" msprop:Generator_ColumnVarNameInTable="columnWelderEmployerGroup" msprop:Generator_ColumnPropNameInTable="WelderEmployerGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderDepartment" msprop:Generator_UserColumnName="WelderDepartment" msprop:Generator_ColumnPropNameInRow="WelderDepartment" msprop:Generator_ColumnVarNameInTable="columnWelderDepartment" msprop:Generator_ColumnPropNameInTable="WelderDepartmentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderDepartmentEnglish" msprop:Generator_UserColumnName="WelderDepartmentEnglish" msprop:Generator_ColumnPropNameInRow="WelderDepartmentEnglish" msprop:Generator_ColumnVarNameInTable="columnWelderDepartmentEnglish" msprop:Generator_ColumnPropNameInTable="WelderDepartmentEnglishColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderShortenedDepartment" msprop:Generator_UserColumnName="WelderShortenedDepartment" msprop:Generator_ColumnPropNameInRow="WelderShortenedDepartment" msprop:Generator_ColumnVarNameInTable="columnWelderShortenedDepartment" msprop:Generator_ColumnPropNameInTable="WelderShortenedDepartmentColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderWorkPlace" msprop:Generator_UserColumnName="WelderWorkPlace" msprop:Generator_ColumnPropNameInRow="WelderWorkPlace" msprop:Generator_ColumnVarNameInTable="columnWelderWorkPlace" msprop:Generator_ColumnPropNameInTable="WelderWorkPlaceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderWorkPlaceEnglish" msprop:Generator_UserColumnName="WelderWorkPlaceEnglish" msprop:Generator_ColumnPropNameInRow="WelderWorkPlaceEnglish" msprop:Generator_ColumnVarNameInTable="columnWelderWorkPlaceEnglish" msprop:Generator_ColumnPropNameInTable="WelderWorkPlaceEnglishColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderShortenedWorkPlace" msprop:Generator_UserColumnName="WelderShortenedWorkPlace" msprop:Generator_ColumnPropNameInRow="WelderShortenedWorkPlace" msprop:Generator_ColumnVarNameInTable="columnWelderShortenedWorkPlace" msprop:Generator_ColumnPropNameInTable="WelderShortenedWorkPlaceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderLaborServiceTeam" msprop:Generator_UserColumnName="WelderLaborServiceTeam" msprop:Generator_ColumnPropNameInRow="WelderLaborServiceTeam" msprop:Generator_ColumnVarNameInTable="columnWelderLaborServiceTeam" msprop:Generator_ColumnPropNameInTable="WelderLaborServiceTeamColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderShortenedLaborServiceTeam" msprop:Generator_UserColumnName="WelderShortenedLaborServiceTeam" msprop:Generator_ColumnPropNameInRow="WelderShortenedLaborServiceTeam" msprop:Generator_ColumnVarNameInTable="columnWelderShortenedLaborServiceTeam" msprop:Generator_ColumnPropNameInTable="WelderShortenedLaborServiceTeamColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WelderLaborServiceTeamEnglish" msprop:Generator_UserColumnName="WelderLaborServiceTeamEnglish" msprop:Generator_ColumnPropNameInRow="WelderLaborServiceTeamEnglish" msprop:Generator_ColumnVarNameInTable="columnWelderLaborServiceTeamEnglish" msprop:Generator_ColumnPropNameInTable="WelderLaborServiceTeamEnglishColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentKindofExam" msprop:Generator_UserColumnName="StudentKindofExam" msprop:Generator_ColumnPropNameInRow="StudentKindofExam" msprop:Generator_ColumnVarNameInTable="columnStudentKindofExam" msprop:Generator_ColumnPropNameInTable="StudentKindofExamColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExamSubjectID" msprop:Generator_UserColumnName="ExamSubjectID" msprop:Generator_ColumnPropNameInRow="ExamSubjectID" msprop:Generator_ColumnVarNameInTable="columnExamSubjectID" msprop:Generator_ColumnPropNameInTable="ExamSubjectIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExamSubjectCode" msprop:Generator_UserColumnName="ExamSubjectCode" msprop:Generator_ColumnPropNameInRow="ExamSubjectCode" msprop:Generator_ColumnVarNameInTable="columnExamSubjectCode" msprop:Generator_ColumnPropNameInTable="ExamSubjectCodeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentMaterial" msprop:Generator_UserColumnName="StudentMaterial" msprop:Generator_ColumnPropNameInRow="StudentMaterial" msprop:Generator_ColumnVarNameInTable="columnStudentMaterial" msprop:Generator_ColumnPropNameInTable="StudentMaterialColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentDimensionofMaterial" msprop:Generator_UserColumnName="StudentDimensionofMaterial" msprop:Generator_ColumnPropNameInRow="StudentDimensionofMaterial" msprop:Generator_ColumnVarNameInTable="columnStudentDimensionofMaterial" msprop:Generator_ColumnPropNameInTable="StudentDimensionofMaterialColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentWeldingConsumable" msprop:Generator_UserColumnName="StudentWeldingConsumable" msprop:Generator_ColumnPropNameInRow="StudentWeldingConsumable" msprop:Generator_ColumnVarNameInTable="columnStudentWeldingConsumable" msprop:Generator_ColumnPropNameInTable="StudentWeldingConsumableColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentThickness" msprop:Generator_UserColumnName="StudentThickness" msprop:Generator_ColumnPropNameInRow="StudentThickness" msprop:Generator_ColumnVarNameInTable="columnStudentThickness" msprop:Generator_ColumnPropNameInTable="StudentThicknessColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentExternalDiameter" msprop:Generator_UserColumnName="StudentExternalDiameter" msprop:Generator_ColumnPropNameInRow="StudentExternalDiameter" msprop:Generator_ColumnVarNameInTable="columnStudentExternalDiameter" msprop:Generator_ColumnPropNameInTable="StudentExternalDiameterColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StudentRenderWeldingRodDiameter" msprop:Generator_UserColumnName="StudentRenderWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="StudentRenderWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnStudentRenderWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="StudentRenderWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="StudentWeldingRodDiameter" msprop:Generator_UserColumnName="StudentWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="StudentWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnStudentWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="StudentWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="StudentCoverWeldingRodDiameter" msprop:Generator_UserColumnName="StudentCoverWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="StudentCoverWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnStudentCoverWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="StudentCoverWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="StudentAssemblage" msprop:Generator_UserColumnName="StudentAssemblage" msprop:Generator_ColumnPropNameInRow="StudentAssemblage" msprop:Generator_ColumnVarNameInTable="columnStudentAssemblage" msprop:Generator_ColumnPropNameInTable="StudentAssemblageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ExamStatus" msprop:Generator_UserColumnName="ExamStatus" msprop:Generator_ColumnPropNameInRow="ExamStatus" msprop:Generator_ColumnVarNameInTable="columnExamStatus" msprop:Generator_ColumnPropNameInTable="ExamStatusColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TheoryResult" msprop:Generator_UserColumnName="TheoryResult" msprop:Generator_ColumnPropNameInRow="TheoryResult" msprop:Generator_ColumnVarNameInTable="columnTheoryResult" msprop:Generator_ColumnPropNameInTable="TheoryResultColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SkillResult" msprop:Generator_UserColumnName="SkillResult" msprop:Generator_ColumnPropNameInRow="SkillResult" msprop:Generator_ColumnVarNameInTable="columnSkillResult" msprop:Generator_ColumnPropNameInTable="SkillResultColumn" type="xs:boolean" />
+              <xs:element name="TheoryMakeupResult" msprop:Generator_UserColumnName="TheoryMakeupResult" msprop:Generator_ColumnPropNameInRow="TheoryMakeupResult" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupResult" msprop:Generator_ColumnPropNameInTable="TheoryMakeupResultColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="SkillMakeupResult" msprop:Generator_UserColumnName="SkillMakeupResult" msprop:Generator_ColumnPropNameInRow="SkillMakeupResult" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupResult" msprop:Generator_ColumnPropNameInTable="SkillMakeupResultColumn" type="xs:boolean" />
+              <xs:element name="StudentMarked" msprop:Generator_UserColumnName="StudentMarked" msprop:Generator_ColumnPropNameInRow="StudentMarked" msprop:Generator_ColumnVarNameInTable="columnStudentMarked" msprop:Generator_ColumnPropNameInTable="StudentMarkedColumn" type="xs:boolean" />
+              <xs:element name="StudentRemark" msprop:Generator_UserColumnName="StudentRemark" msprop:Generator_ColumnPropNameInRow="StudentRemark" msprop:Generator_ColumnVarNameInTable="columnStudentRemark" msprop:Generator_ColumnPropNameInTable="StudentRemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueStatus" msprop:Generator_UserColumnName="IssueStatus" msprop:Generator_ColumnPropNameInRow="IssueStatus" msprop:Generator_ColumnVarNameInTable="columnIssueStatus" msprop:Generator_ColumnPropNameInTable="IssueStatusColumn" type="xs:int" />
+              <xs:element name="PlaceofTest" msprop:Generator_UserColumnName="PlaceofTest" msprop:Generator_ColumnPropNameInRow="PlaceofTest" msprop:Generator_ColumnVarNameInTable="columnPlaceofTest" msprop:Generator_ColumnPropNameInTable="PlaceofTestColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SignUpDate" msprop:Generator_UserColumnName="SignUpDate" msprop:Generator_ColumnPropNameInRow="SignUpDate" msprop:Generator_ColumnVarNameInTable="columnSignUpDate" msprop:Generator_ColumnPropNameInTable="SignUpDateColumn" type="xs:dateTime" />
+              <xs:element name="DateBeginningofTrain" msprop:Generator_UserColumnName="DateBeginningofTrain" msprop:Generator_ColumnPropNameInRow="DateBeginningofTrain" msprop:Generator_ColumnVarNameInTable="columnDateBeginningofTrain" msprop:Generator_ColumnPropNameInTable="DateBeginningofTrainColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateEndingofTrain" msprop:Generator_UserColumnName="DateEndingofTrain" msprop:Generator_ColumnPropNameInRow="DateEndingofTrain" msprop:Generator_ColumnVarNameInTable="columnDateEndingofTrain" msprop:Generator_ColumnPropNameInTable="DateEndingofTrainColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="KindofEmployer" msprop:Generator_UserColumnName="KindofEmployer" msprop:Generator_ColumnPropNameInRow="KindofEmployer" msprop:Generator_ColumnVarNameInTable="columnKindofEmployer" msprop:Generator_ColumnPropNameInTable="KindofEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployerHPID" msprop:Generator_UserColumnName="IssueEmployerHPID" msprop:Generator_ColumnPropNameInRow="IssueEmployerHPID" msprop:Generator_ColumnVarNameInTable="columnIssueEmployerHPID" msprop:Generator_ColumnPropNameInTable="IssueEmployerHPIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueKindofExam" msprop:Generator_UserColumnName="IssueKindofExam" msprop:Generator_ColumnPropNameInRow="IssueKindofExam" msprop:Generator_ColumnVarNameInTable="columnIssueKindofExam" msprop:Generator_ColumnPropNameInTable="IssueKindofExamColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueMaterial" msprop:Generator_UserColumnName="IssueMaterial" msprop:Generator_ColumnPropNameInRow="IssueMaterial" msprop:Generator_ColumnVarNameInTable="columnIssueMaterial" msprop:Generator_ColumnPropNameInTable="IssueMaterialColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueDimensionofMaterial" msprop:Generator_UserColumnName="IssueDimensionofMaterial" msprop:Generator_ColumnPropNameInRow="IssueDimensionofMaterial" msprop:Generator_ColumnVarNameInTable="columnIssueDimensionofMaterial" msprop:Generator_ColumnPropNameInTable="IssueDimensionofMaterialColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueWeldingConsumable" msprop:Generator_UserColumnName="IssueWeldingConsumable" msprop:Generator_ColumnPropNameInRow="IssueWeldingConsumable" msprop:Generator_ColumnVarNameInTable="columnIssueWeldingConsumable" msprop:Generator_ColumnPropNameInTable="IssueWeldingConsumableColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueThickness" msprop:Generator_UserColumnName="IssueThickness" msprop:Generator_ColumnPropNameInRow="IssueThickness" msprop:Generator_ColumnVarNameInTable="columnIssueThickness" msprop:Generator_ColumnPropNameInTable="IssueThicknessColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueExternalDiameter" msprop:Generator_UserColumnName="IssueExternalDiameter" msprop:Generator_ColumnPropNameInRow="IssueExternalDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueExternalDiameter" msprop:Generator_ColumnPropNameInTable="IssueExternalDiameterColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueRenderWeldingRodDiameter" msprop:Generator_UserColumnName="IssueRenderWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="IssueRenderWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueRenderWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="IssueRenderWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="IssueWeldingRodDiameter" msprop:Generator_UserColumnName="IssueWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="IssueWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="IssueWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="IssueCoverWeldingRodDiameter" msprop:Generator_UserColumnName="IssueCoverWeldingRodDiameter" msprop:Generator_ColumnPropNameInRow="IssueCoverWeldingRodDiameter" msprop:Generator_ColumnVarNameInTable="columnIssueCoverWeldingRodDiameter" msprop:Generator_ColumnPropNameInTable="IssueCoverWeldingRodDiameterColumn" type="xs:float" />
+              <xs:element name="IssueAssemblage" msprop:Generator_UserColumnName="IssueAssemblage" msprop:Generator_ColumnPropNameInRow="IssueAssemblage" msprop:Generator_ColumnVarNameInTable="columnIssueAssemblage" msprop:Generator_ColumnPropNameInTable="IssueAssemblageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TheoryExamDate" msprop:Generator_UserColumnName="TheoryExamDate" msprop:Generator_ColumnPropNameInRow="TheoryExamDate" msprop:Generator_ColumnVarNameInTable="columnTheoryExamDate" msprop:Generator_ColumnPropNameInTable="TheoryExamDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SkillExamDate" msprop:Generator_UserColumnName="SkillExamDate" msprop:Generator_ColumnPropNameInRow="SkillExamDate" msprop:Generator_ColumnVarNameInTable="columnSkillExamDate" msprop:Generator_ColumnPropNameInTable="SkillExamDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TheoryMakeupDate" msprop:Generator_UserColumnName="TheoryMakeupDate" msprop:Generator_ColumnPropNameInRow="TheoryMakeupDate" msprop:Generator_ColumnVarNameInTable="columnTheoryMakeupDate" msprop:Generator_ColumnPropNameInTable="TheoryMakeupDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SkillMakeupDate" msprop:Generator_UserColumnName="SkillMakeupDate" msprop:Generator_ColumnPropNameInRow="SkillMakeupDate" msprop:Generator_ColumnVarNameInTable="columnSkillMakeupDate" msprop:Generator_ColumnPropNameInTable="SkillMakeupDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TheoryTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="TheoryTeacherID" msprop:Generator_ColumnPropNameInRow="TheoryTeacherID" msprop:Generator_ColumnVarNameInTable="columnTheoryTeacherID" msprop:Generator_ColumnPropNameInTable="TheoryTeacherIDColumn" type="xs:string" />
+              <xs:element name="SkillTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="SkillTeacherID" msprop:Generator_ColumnPropNameInRow="SkillTeacherID" msprop:Generator_ColumnVarNameInTable="columnSkillTeacherID" msprop:Generator_ColumnPropNameInTable="SkillTeacherIDColumn" type="xs:string" />
+              <xs:element name="IssueQCTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="IssueQCTeacherID" msprop:Generator_ColumnPropNameInRow="IssueQCTeacherID" msprop:Generator_ColumnVarNameInTable="columnIssueQCTeacherID" msprop:Generator_ColumnPropNameInTable="IssueQCTeacherIDColumn" type="xs:string" />
+              <xs:element name="SupervisorID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="SupervisorID" msprop:Generator_ColumnPropNameInRow="SupervisorID" msprop:Generator_ColumnVarNameInTable="columnSupervisorID" msprop:Generator_ColumnPropNameInTable="SupervisorIDColumn" type="xs:string" />
+              <xs:element name="ArchiveTeacherID" msdata:DataType="System.Guid, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_UserColumnName="ArchiveTeacherID" msprop:Generator_ColumnPropNameInRow="ArchiveTeacherID" msprop:Generator_ColumnVarNameInTable="columnArchiveTeacherID" msprop:Generator_ColumnPropNameInTable="ArchiveTeacherIDColumn" type="xs:string" minOccurs="0" />
+              <xs:element name="VisualTestDate" msprop:Generator_UserColumnName="VisualTestDate" msprop:Generator_ColumnPropNameInRow="VisualTestDate" msprop:Generator_ColumnVarNameInTable="columnVisualTestDate" msprop:Generator_ColumnPropNameInTable="VisualTestDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="BendTestDate" msprop:Generator_UserColumnName="BendTestDate" msprop:Generator_ColumnPropNameInRow="BendTestDate" msprop:Generator_ColumnVarNameInTable="columnBendTestDate" msprop:Generator_ColumnPropNameInTable="BendTestDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RTTestDate" msprop:Generator_UserColumnName="RTTestDate" msprop:Generator_ColumnPropNameInRow="RTTestDate" msprop:Generator_ColumnVarNameInTable="columnRTTestDate" msprop:Generator_ColumnPropNameInTable="RTTestDateColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IssueIssuedOn" msprop:Generator_UserColumnName="IssueIssuedOn" msprop:Generator_ColumnPropNameInRow="IssueIssuedOn" msprop:Generator_ColumnVarNameInTable="columnIssueIssuedOn" msprop:Generator_ColumnPropNameInTable="IssueIssuedOnColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IssueSupervisionPlace" msprop:Generator_UserColumnName="IssueSupervisionPlace" msprop:Generator_ColumnPropNameInRow="IssueSupervisionPlace" msprop:Generator_ColumnVarNameInTable="columnIssueSupervisionPlace" msprop:Generator_ColumnPropNameInTable="IssueSupervisionPlaceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssuePeriodofValidity" msprop:Generator_UserColumnName="IssuePeriodofValidity" msprop:Generator_ColumnPropNameInRow="IssuePeriodofValidity" msprop:Generator_ColumnVarNameInTable="columnIssuePeriodofValidity" msprop:Generator_ColumnPropNameInTable="IssuePeriodofValidityColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="IssueRemark" msprop:Generator_UserColumnName="IssueRemark" msprop:Generator_ColumnPropNameInRow="IssueRemark" msprop:Generator_ColumnVarNameInTable="columnIssueRemark" msprop:Generator_ColumnPropNameInTable="IssueRemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TheoryTeacherUserName" msprop:Generator_UserColumnName="TheoryTeacherUserName" msprop:Generator_ColumnPropNameInRow="TheoryTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnTheoryTeacherUserName" msprop:Generator_ColumnPropNameInTable="TheoryTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TheoryTeacherName" msprop:Generator_UserColumnName="TheoryTeacherName" msprop:Generator_ColumnPropNameInRow="TheoryTeacherName" msprop:Generator_ColumnVarNameInTable="columnTheoryTeacherName" msprop:Generator_ColumnPropNameInTable="TheoryTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SkillTeacherUserName" msprop:Generator_UserColumnName="SkillTeacherUserName" msprop:Generator_ColumnPropNameInRow="SkillTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnSkillTeacherUserName" msprop:Generator_ColumnPropNameInTable="SkillTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SkillTeacherName" msprop:Generator_UserColumnName="SkillTeacherName" msprop:Generator_ColumnPropNameInRow="SkillTeacherName" msprop:Generator_ColumnVarNameInTable="columnSkillTeacherName" msprop:Generator_ColumnPropNameInTable="SkillTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueQCTeacherUserName" msprop:Generator_UserColumnName="IssueQCTeacherUserName" msprop:Generator_ColumnPropNameInRow="IssueQCTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnIssueQCTeacherUserName" msprop:Generator_ColumnPropNameInTable="IssueQCTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueQCTeacherName" msprop:Generator_UserColumnName="IssueQCTeacherName" msprop:Generator_ColumnPropNameInRow="IssueQCTeacherName" msprop:Generator_ColumnVarNameInTable="columnIssueQCTeacherName" msprop:Generator_ColumnPropNameInTable="IssueQCTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupervisorUserName" msprop:Generator_UserColumnName="SupervisorUserName" msprop:Generator_ColumnPropNameInRow="SupervisorUserName" msprop:Generator_ColumnVarNameInTable="columnSupervisorUserName" msprop:Generator_ColumnPropNameInTable="SupervisorUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupervisorName" msprop:Generator_UserColumnName="SupervisorName" msprop:Generator_ColumnPropNameInRow="SupervisorName" msprop:Generator_ColumnVarNameInTable="columnSupervisorName" msprop:Generator_ColumnPropNameInTable="SupervisorNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArchiveTeacherUserName" msprop:Generator_UserColumnName="ArchiveTeacherUserName" msprop:Generator_ColumnPropNameInRow="ArchiveTeacherUserName" msprop:Generator_ColumnVarNameInTable="columnArchiveTeacherUserName" msprop:Generator_ColumnPropNameInTable="ArchiveTeacherUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ArchiveTeacherName" msprop:Generator_UserColumnName="ArchiveTeacherName" msprop:Generator_ColumnPropNameInRow="ArchiveTeacherName" msprop:Generator_ColumnVarNameInTable="columnArchiveTeacherName" msprop:Generator_ColumnPropNameInTable="ArchiveTeacherNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployer" msprop:Generator_UserColumnName="IssueEmployer" msprop:Generator_ColumnPropNameInRow="IssueEmployer" msprop:Generator_ColumnVarNameInTable="columnIssueEmployer" msprop:Generator_ColumnPropNameInTable="IssueEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployerEnglish" msprop:Generator_UserColumnName="IssueEmployerEnglish" msprop:Generator_ColumnPropNameInRow="IssueEmployerEnglish" msprop:Generator_ColumnVarNameInTable="columnIssueEmployerEnglish" msprop:Generator_ColumnPropNameInTable="IssueEmployerEnglishColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueShortenedEmployer" msprop:Generator_UserColumnName="IssueShortenedEmployer" msprop:Generator_ColumnPropNameInRow="IssueShortenedEmployer" msprop:Generator_ColumnVarNameInTable="columnIssueShortenedEmployer" msprop:Generator_ColumnPropNameInTable="IssueShortenedEmployerColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssueEmployerGroup" msprop:Generator_UserColumnName="IssueEmployerGroup" msprop:Generator_ColumnPropNameInRow="IssueEmployerGroup" msprop:Generator_ColumnVarNameInTable="columnIssueEmployerGroup" msprop:Generator_ColumnPropNameInTable="IssueEmployerGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CertificateNo" msprop:Generator_UserColumnName="CertificateNo" msprop:Generator_ColumnPropNameInRow="CertificateNo" msprop:Generator_ColumnVarNameInTable="columnCertificateNo" msprop:Generator_ColumnPropNameInTable="CertificateNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="isQCValid" msprop:Generator_UserColumnName="isQCValid" msprop:Generator_ColumnPropNameInRow="isQCValid" msprop:Generator_ColumnVarNameInTable="columnisQCValid" msprop:Generator_ColumnPropNameInTable="isQCValidColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="QCSubjectID" msprop:Generator_UserColumnName="QCSubjectID" msprop:Generator_ColumnPropNameInRow="QCSubjectID" msprop:Generator_ColumnVarNameInTable="columnQCSubjectID" msprop:Generator_ColumnPropNameInTable="QCSubjectIDColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IssuedOn" msprop:Generator_UserColumnName="IssuedOn" msprop:Generator_ColumnPropNameInRow="IssuedOn" msprop:Generator_ColumnVarNameInTable="columnIssuedOn" msprop:Generator_ColumnPropNameInTable="IssuedOnColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="PeriodofValidity" msprop:Generator_UserColumnName="PeriodofValidity" msprop:Generator_ColumnPropNameInRow="PeriodofValidity" msprop:Generator_ColumnVarNameInTable="columnPeriodofValidity" msprop:Generator_ColumnPropNameInTable="PeriodofValidityColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="OriginalPeriod" msprop:Generator_UserColumnName="OriginalPeriod" msprop:Generator_ColumnPropNameInRow="OriginalPeriod" msprop:Generator_ColumnVarNameInTable="columnOriginalPeriod" msprop:Generator_ColumnPropNameInTable="OriginalPeriodColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="PeriodofProlongation" msprop:Generator_UserColumnName="PeriodofProlongation" msprop:Generator_ColumnPropNameInRow="PeriodofProlongation" msprop:Generator_ColumnVarNameInTable="columnPeriodofProlongation" msprop:Generator_ColumnPropNameInTable="PeriodofProlongationColumn" type="xs:short" minOccurs="0" />
+              <xs:element name="ValidUntil" msprop:Generator_UserColumnName="ValidUntil" msprop:Generator_ColumnPropNameInRow="ValidUntil" msprop:Generator_ColumnVarNameInTable="columnValidUntil" msprop:Generator_ColumnPropNameInTable="ValidUntilColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionPlace" msprop:Generator_UserColumnName="SupervisionPlace" msprop:Generator_ColumnPropNameInRow="SupervisionPlace" msprop:Generator_ColumnVarNameInTable="columnSupervisionPlace" msprop:Generator_ColumnPropNameInTable="SupervisionPlaceColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SupervisionFirst" msprop:Generator_UserColumnName="SupervisionFirst" msprop:Generator_ColumnPropNameInRow="SupervisionFirst" msprop:Generator_ColumnVarNameInTable="columnSupervisionFirst" msprop:Generator_ColumnPropNameInTable="SupervisionFirstColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionSecond" msprop:Generator_UserColumnName="SupervisionSecond" msprop:Generator_ColumnPropNameInRow="SupervisionSecond" msprop:Generator_ColumnVarNameInTable="columnSupervisionSecond" msprop:Generator_ColumnPropNameInTable="SupervisionSecondColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionThird" msprop:Generator_UserColumnName="SupervisionThird" msprop:Generator_ColumnPropNameInRow="SupervisionThird" msprop:Generator_ColumnVarNameInTable="columnSupervisionThird" msprop:Generator_ColumnPropNameInTable="SupervisionThirdColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionFourth" msprop:Generator_UserColumnName="SupervisionFourth" msprop:Generator_ColumnPropNameInRow="SupervisionFourth" msprop:Generator_ColumnVarNameInTable="columnSupervisionFourth" msprop:Generator_ColumnPropNameInTable="SupervisionFourthColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionFifth" msprop:Generator_UserColumnName="SupervisionFifth" msprop:Generator_ColumnPropNameInRow="SupervisionFifth" msprop:Generator_ColumnVarNameInTable="columnSupervisionFifth" msprop:Generator_ColumnPropNameInTable="SupervisionFifthColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionSixth" msprop:Generator_UserColumnName="SupervisionSixth" msprop:Generator_ColumnPropNameInRow="SupervisionSixth" msprop:Generator_ColumnVarNameInTable="columnSupervisionSixth" msprop:Generator_ColumnPropNameInTable="SupervisionSixthColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionSeventh" msprop:Generator_UserColumnName="SupervisionSeventh" msprop:Generator_ColumnPropNameInRow="SupervisionSeventh" msprop:Generator_ColumnVarNameInTable="columnSupervisionSeventh" msprop:Generator_ColumnPropNameInTable="SupervisionSeventhColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionEighth" msprop:Generator_UserColumnName="SupervisionEighth" msprop:Generator_ColumnPropNameInRow="SupervisionEighth" msprop:Generator_ColumnVarNameInTable="columnSupervisionEighth" msprop:Generator_ColumnPropNameInTable="SupervisionEighthColumn" type="xs:boolean" minOccurs="0" />
+              <xs:element name="SupervisionDateFirst" msprop:Generator_UserColumnName="SupervisionDateFirst" msprop:Generator_ColumnPropNameInRow="SupervisionDateFirst" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateFirst" msprop:Generator_ColumnPropNameInTable="SupervisionDateFirstColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionDateSecond" msprop:Generator_UserColumnName="SupervisionDateSecond" msprop:Generator_ColumnPropNameInRow="SupervisionDateSecond" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateSecond" msprop:Generator_ColumnPropNameInTable="SupervisionDateSecondColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionDateThird" msprop:Generator_UserColumnName="SupervisionDateThird" msprop:Generator_ColumnPropNameInRow="SupervisionDateThird" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateThird" msprop:Generator_ColumnPropNameInTable="SupervisionDateThirdColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionDateFourth" msprop:Generator_UserColumnName="SupervisionDateFourth" msprop:Generator_ColumnPropNameInRow="SupervisionDateFourth" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateFourth" msprop:Generator_ColumnPropNameInTable="SupervisionDateFourthColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionDateFifth" msprop:Generator_UserColumnName="SupervisionDateFifth" msprop:Generator_ColumnPropNameInRow="SupervisionDateFifth" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateFifth" msprop:Generator_ColumnPropNameInTable="SupervisionDateFifthColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionDateSixth" msprop:Generator_UserColumnName="SupervisionDateSixth" msprop:Generator_ColumnPropNameInRow="SupervisionDateSixth" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateSixth" msprop:Generator_ColumnPropNameInTable="SupervisionDateSixthColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionDateSeventh" msprop:Generator_UserColumnName="SupervisionDateSeventh" msprop:Generator_ColumnPropNameInRow="SupervisionDateSeventh" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateSeventh" msprop:Generator_ColumnPropNameInTable="SupervisionDateSeventhColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SupervisionDateEighth" msprop:Generator_UserColumnName="SupervisionDateEighth" msprop:Generator_ColumnPropNameInRow="SupervisionDateEighth" msprop:Generator_ColumnVarNameInTable="columnSupervisionDateEighth" msprop:Generator_ColumnPropNameInTable="SupervisionDateEighthColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DateofProlongation" msprop:Generator_UserColumnName="DateofProlongation" msprop:Generator_ColumnPropNameInRow="DateofProlongation" msprop:Generator_ColumnVarNameInTable="columnDateofProlongation" msprop:Generator_ColumnPropNameInTable="DateofProlongationColumn" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="QCRemark" msprop:Generator_UserColumnName="QCRemark" msprop:Generator_ColumnPropNameInRow="QCRemark" msprop:Generator_ColumnVarNameInTable="columnQCRemark" msprop:Generator_ColumnPropNameInTable="QCRemarkColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISOAssemblage" msprop:Generator_UserColumnName="ISOAssemblage" msprop:Generator_ColumnPropNameInRow="ISOAssemblage" msprop:Generator_ColumnVarNameInTable="columnISOAssemblage" msprop:Generator_ColumnPropNameInTable="ISOAssemblageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISOWeldingSide" msprop:Generator_UserColumnName="ISOWeldingSide" msprop:Generator_ColumnPropNameInRow="ISOWeldingSide" msprop:Generator_ColumnVarNameInTable="columnISOWeldingSide" msprop:Generator_ColumnPropNameInTable="ISOWeldingSideColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingSide" msprop:Generator_UserColumnName="WeldingSide" msprop:Generator_ColumnPropNameInRow="WeldingSide" msprop:Generator_ColumnVarNameInTable="columnWeldingSide" msprop:Generator_ColumnPropNameInTable="WeldingSideColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofCCSAssemblage" msprop:Generator_UserColumnName="ScopeofCCSAssemblage" msprop:Generator_ColumnPropNameInRow="ScopeofCCSAssemblage" msprop:Generator_ColumnVarNameInTable="columnScopeofCCSAssemblage" msprop:Generator_ColumnPropNameInTable="ScopeofCCSAssemblageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofISOAssemblage" msprop:Generator_UserColumnName="ScopeofISOAssemblage" msprop:Generator_ColumnPropNameInRow="ScopeofISOAssemblage" msprop:Generator_ColumnVarNameInTable="columnScopeofISOAssemblage" msprop:Generator_ColumnPropNameInTable="ScopeofISOAssemblageColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialCCSGroupAb" msprop:Generator_UserColumnName="MaterialCCSGroupAb" msprop:Generator_ColumnPropNameInRow="MaterialCCSGroupAb" msprop:Generator_ColumnVarNameInTable="columnMaterialCCSGroupAb" msprop:Generator_ColumnPropNameInTable="MaterialCCSGroupAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialISOGroupAb" msprop:Generator_UserColumnName="MaterialISOGroupAb" msprop:Generator_ColumnPropNameInRow="MaterialISOGroupAb" msprop:Generator_ColumnVarNameInTable="columnMaterialISOGroupAb" msprop:Generator_ColumnPropNameInTable="MaterialISOGroupAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialCCSGroup" msprop:Generator_UserColumnName="MaterialCCSGroup" msprop:Generator_ColumnPropNameInRow="MaterialCCSGroup" msprop:Generator_ColumnVarNameInTable="columnMaterialCCSGroup" msprop:Generator_ColumnPropNameInTable="MaterialCCSGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofMaterialCCSGroup" msprop:Generator_UserColumnName="ScopeofMaterialCCSGroup" msprop:Generator_ColumnPropNameInRow="ScopeofMaterialCCSGroup" msprop:Generator_ColumnVarNameInTable="columnScopeofMaterialCCSGroup" msprop:Generator_ColumnPropNameInTable="ScopeofMaterialCCSGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialISOGroup" msprop:Generator_UserColumnName="MaterialISOGroup" msprop:Generator_ColumnPropNameInRow="MaterialISOGroup" msprop:Generator_ColumnVarNameInTable="columnMaterialISOGroup" msprop:Generator_ColumnPropNameInTable="MaterialISOGroupColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofMaterialISOGroup" msprop:Generator_UserColumnName="ScopeofMaterialISOGroup" msprop:Generator_ColumnPropNameInRow="ScopeofMaterialISOGroup" msprop:Generator_ColumnVarNameInTable="columnScopeofMaterialISOGroup" msprop:Generator_ColumnPropNameInTable="ScopeofMaterialISOGroupColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingConsumableCCSGroupAb" msprop:Generator_UserColumnName="WeldingConsumableCCSGroupAb" msprop:Generator_ColumnPropNameInRow="WeldingConsumableCCSGroupAb" msprop:Generator_ColumnVarNameInTable="columnWeldingConsumableCCSGroupAb" msprop:Generator_ColumnPropNameInTable="WeldingConsumableCCSGroupAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingConsumableISOGroupAb" msprop:Generator_UserColumnName="WeldingConsumableISOGroupAb" msprop:Generator_ColumnPropNameInRow="WeldingConsumableISOGroupAb" msprop:Generator_ColumnVarNameInTable="columnWeldingConsumableISOGroupAb" msprop:Generator_ColumnPropNameInTable="WeldingConsumableISOGroupAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingConsumableCCSGroup" msprop:Generator_UserColumnName="WeldingConsumableCCSGroup" msprop:Generator_ColumnPropNameInRow="WeldingConsumableCCSGroup" msprop:Generator_ColumnVarNameInTable="columnWeldingConsumableCCSGroup" msprop:Generator_ColumnPropNameInTable="WeldingConsumableCCSGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofWeldingConsumableCCSGroup" msprop:Generator_UserColumnName="ScopeofWeldingConsumableCCSGroup" msprop:Generator_ColumnPropNameInRow="ScopeofWeldingConsumableCCSGroup" msprop:Generator_ColumnVarNameInTable="columnScopeofWeldingConsumableCCSGroup" msprop:Generator_ColumnPropNameInTable="ScopeofWeldingConsumableCCSGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingConsumableISOGroup" msprop:Generator_UserColumnName="WeldingConsumableISOGroup" msprop:Generator_ColumnPropNameInRow="WeldingConsumableISOGroup" msprop:Generator_ColumnVarNameInTable="columnWeldingConsumableISOGroup" msprop:Generator_ColumnPropNameInTable="WeldingConsumableISOGroupColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProject" msprop:Generator_UserColumnName="WeldingProject" msprop:Generator_ColumnPropNameInRow="WeldingProject" msprop:Generator_ColumnVarNameInTable="columnWeldingProject" msprop:Generator_ColumnPropNameInTable="WeldingProjectColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProjectAb" msprop:Generator_UserColumnName="WeldingProjectAb" msprop:Generator_ColumnPropNameInRow="WeldingProjectAb" msprop:Generator_ColumnVarNameInTable="columnWeldingProjectAb" msprop:Generator_ColumnPropNameInTable="WeldingProjectAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofWeldingProject" msprop:Generator_UserColumnName="ScopeofWeldingProject" msprop:Generator_ColumnPropNameInRow="ScopeofWeldingProject" msprop:Generator_ColumnVarNameInTable="columnScopeofWeldingProject" msprop:Generator_ColumnPropNameInTable="ScopeofWeldingProjectColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="JointType" msprop:Generator_UserColumnName="JointType" msprop:Generator_ColumnPropNameInRow="JointType" msprop:Generator_ColumnVarNameInTable="columnJointType" msprop:Generator_ColumnPropNameInTable="JointTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WorkPieceType" msprop:Generator_UserColumnName="WorkPieceType" msprop:Generator_ColumnPropNameInRow="WorkPieceType" msprop:Generator_ColumnVarNameInTable="columnWorkPieceType" msprop:Generator_ColumnPropNameInTable="WorkPieceTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingClass" msprop:Generator_UserColumnName="WeldingClass" msprop:Generator_ColumnPropNameInRow="WeldingClass" msprop:Generator_ColumnVarNameInTable="columnWeldingClass" msprop:Generator_ColumnPropNameInTable="WeldingClassColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingClassAb" msprop:Generator_UserColumnName="WeldingClassAb" msprop:Generator_ColumnPropNameInRow="WeldingClassAb" msprop:Generator_ColumnVarNameInTable="columnWeldingClassAb" msprop:Generator_ColumnPropNameInTable="WeldingClassAbColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofWeldingClass" msprop:Generator_UserColumnName="ScopeofWeldingClass" msprop:Generator_ColumnPropNameInRow="ScopeofWeldingClass" msprop:Generator_ColumnVarNameInTable="columnScopeofWeldingClass" msprop:Generator_ColumnPropNameInTable="ScopeofWeldingClassColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SubjectClass" msprop:Generator_UserColumnName="SubjectClass" msprop:Generator_ColumnPropNameInRow="SubjectClass" msprop:Generator_ColumnVarNameInTable="columnSubjectClass" msprop:Generator_ColumnPropNameInTable="SubjectClassColumn" type="xs:int" />
+              <xs:element name="Subject" msprop:Generator_UserColumnName="Subject" msprop:Generator_ColumnPropNameInRow="Subject" msprop:Generator_ColumnVarNameInTable="columnSubject" msprop:Generator_ColumnPropNameInTable="SubjectColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofSubject" msprop:Generator_UserColumnName="ScopeofSubject" msprop:Generator_ColumnPropNameInRow="ScopeofSubject" msprop:Generator_ColumnVarNameInTable="columnScopeofSubject" msprop:Generator_ColumnPropNameInTable="ScopeofSubjectColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCWeldingProject" msprop:Generator_UserColumnName="QCWeldingProject" msprop:Generator_ColumnPropNameInRow="QCWeldingProject" msprop:Generator_ColumnVarNameInTable="columnQCWeldingProject" msprop:Generator_ColumnPropNameInTable="QCWeldingProjectColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCWeldingProjectAb" msprop:Generator_UserColumnName="QCWeldingProjectAb" msprop:Generator_ColumnPropNameInRow="QCWeldingProjectAb" msprop:Generator_ColumnVarNameInTable="columnQCWeldingProjectAb" msprop:Generator_ColumnPropNameInTable="QCWeldingProjectAbColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCScopeofWeldingProject" msprop:Generator_UserColumnName="QCScopeofWeldingProject" msprop:Generator_ColumnPropNameInRow="QCScopeofWeldingProject" msprop:Generator_ColumnVarNameInTable="columnQCScopeofWeldingProject" msprop:Generator_ColumnPropNameInTable="QCScopeofWeldingProjectColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCJointType" msprop:Generator_UserColumnName="QCJointType" msprop:Generator_ColumnPropNameInRow="QCJointType" msprop:Generator_ColumnVarNameInTable="columnQCJointType" msprop:Generator_ColumnPropNameInTable="QCJointTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCWorkPieceType" msprop:Generator_UserColumnName="QCWorkPieceType" msprop:Generator_ColumnPropNameInRow="QCWorkPieceType" msprop:Generator_ColumnVarNameInTable="columnQCWorkPieceType" msprop:Generator_ColumnPropNameInTable="QCWorkPieceTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCWeldingClass" msprop:Generator_UserColumnName="QCWeldingClass" msprop:Generator_ColumnPropNameInRow="QCWeldingClass" msprop:Generator_ColumnVarNameInTable="columnQCWeldingClass" msprop:Generator_ColumnPropNameInTable="QCWeldingClassColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCWeldingClassAb" msprop:Generator_UserColumnName="QCWeldingClassAb" msprop:Generator_ColumnPropNameInRow="QCWeldingClassAb" msprop:Generator_ColumnVarNameInTable="columnQCWeldingClassAb" msprop:Generator_ColumnPropNameInTable="QCWeldingClassAbColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCScopeofWeldingClass" msprop:Generator_UserColumnName="QCScopeofWeldingClass" msprop:Generator_ColumnPropNameInRow="QCScopeofWeldingClass" msprop:Generator_ColumnVarNameInTable="columnQCScopeofWeldingClass" msprop:Generator_ColumnPropNameInTable="QCScopeofWeldingClassColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCSubjectClass" msprop:Generator_UserColumnName="QCSubjectClass" msprop:Generator_ColumnPropNameInRow="QCSubjectClass" msprop:Generator_ColumnVarNameInTable="columnQCSubjectClass" msprop:Generator_ColumnPropNameInTable="QCSubjectClassColumn" type="xs:int" minOccurs="0" />
+              <xs:element name="QCSubject" msprop:Generator_UserColumnName="QCSubject" msprop:Generator_ColumnPropNameInRow="QCSubject" msprop:Generator_ColumnVarNameInTable="columnQCSubject" msprop:Generator_ColumnPropNameInTable="QCSubjectColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCScopeofSubject" msprop:Generator_UserColumnName="QCScopeofSubject" msprop:Generator_ColumnPropNameInRow="QCScopeofSubject" msprop:Generator_ColumnVarNameInTable="columnQCScopeofSubject" msprop:Generator_ColumnPropNameInTable="QCScopeofSubjectColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingStandard" msprop:Generator_UserColumnName="WeldingStandard" msprop:Generator_ColumnPropNameInRow="WeldingStandard" msprop:Generator_ColumnVarNameInTable="columnWeldingStandard" msprop:Generator_ColumnPropNameInTable="WeldingStandardColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingStandardRestrict" msprop:Generator_UserColumnName="WeldingStandardRestrict" msprop:Generator_ColumnPropNameInRow="WeldingStandardRestrict" msprop:Generator_ColumnVarNameInTable="columnWeldingStandardRestrict" msprop:Generator_ColumnPropNameInTable="WeldingStandardRestrictColumn" type="xs:boolean" />
+              <xs:element name="TheorySeparate" msprop:Generator_UserColumnName="TheorySeparate" msprop:Generator_ColumnPropNameInRow="TheorySeparate" msprop:Generator_ColumnVarNameInTable="columnTheorySeparate" msprop:Generator_ColumnPropNameInTable="TheorySeparateColumn" type="xs:boolean" />
+              <xs:element name="TestCommitteeID" msprop:Generator_UserColumnName="TestCommitteeID" msprop:Generator_ColumnPropNameInRow="TestCommitteeID" msprop:Generator_ColumnVarNameInTable="columnTestCommitteeID" msprop:Generator_ColumnPropNameInTable="TestCommitteeIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShipRestrict" msprop:Generator_UserColumnName="ShipRestrict" msprop:Generator_ColumnPropNameInRow="ShipRestrict" msprop:Generator_ColumnVarNameInTable="columnShipRestrict" msprop:Generator_ColumnPropNameInTable="ShipRestrictColumn" type="xs:boolean" />
+              <xs:element name="ShipTestCommitteeID" msprop:Generator_UserColumnName="ShipTestCommitteeID" msprop:Generator_ColumnPropNameInRow="ShipTestCommitteeID" msprop:Generator_ColumnVarNameInTable="columnShipTestCommitteeID" msprop:Generator_ColumnPropNameInTable="ShipTestCommitteeIDColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProcessNo" msprop:Generator_UserColumnName="WeldingProcessNo" msprop:Generator_ColumnPropNameInRow="WeldingProcessNo" msprop:Generator_ColumnVarNameInTable="columnWeldingProcessNo" msprop:Generator_ColumnPropNameInTable="WeldingProcessNoColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="WeldingProcess" msprop:Generator_UserColumnName="WeldingProcess" msprop:Generator_ColumnPropNameInRow="WeldingProcess" msprop:Generator_ColumnVarNameInTable="columnWeldingProcess" msprop:Generator_ColumnPropNameInTable="WeldingProcessColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ProtectGas" msprop:Generator_UserColumnName="ProtectGas" msprop:Generator_ColumnPropNameInRow="ProtectGas" msprop:Generator_ColumnVarNameInTable="columnProtectGas" msprop:Generator_ColumnPropNameInTable="ProtectGasColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KindofCCSWeldingProcess" msprop:Generator_UserColumnName="KindofCCSWeldingProcess" msprop:Generator_ColumnPropNameInRow="KindofCCSWeldingProcess" msprop:Generator_ColumnVarNameInTable="columnKindofCCSWeldingProcess" msprop:Generator_ColumnPropNameInTable="KindofCCSWeldingProcessColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScopeofCCSWeldingProcess" msprop:Generator_UserColumnName="ScopeofCCSWeldingProcess" msprop:Generator_ColumnPropNameInRow="ScopeofCCSWeldingProcess" msprop:Generator_ColumnVarNameInTable="columnScopeofCCSWeldingProcess" msprop:Generator_ColumnPropNameInTable="ScopeofCCSWeldingProcessColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISOJointType" msprop:Generator_UserColumnName="ISOJointType" msprop:Generator_ColumnPropNameInRow="ISOJointType" msprop:Generator_ColumnVarNameInTable="columnISOJointType" msprop:Generator_ColumnPropNameInTable="ISOJointTypeColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCISOJointType" msprop:Generator_UserColumnName="QCISOJointType" msprop:Generator_ColumnPropNameInRow="QCISOJointType" msprop:Generator_ColumnVarNameInTable="columnQCISOJointType" msprop:Generator_ColumnPropNameInTable="QCISOJointTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ISOWorkPieceType" msprop:Generator_UserColumnName="ISOWorkPieceType" msprop:Generator_ColumnPropNameInRow="ISOWorkPieceType" msprop:Generator_ColumnVarNameInTable="columnISOWorkPieceType" msprop:Generator_ColumnPropNameInTable="ISOWorkPieceTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCISOWorkPieceType" msprop:Generator_UserColumnName="QCISOWorkPieceType" msprop:Generator_ColumnPropNameInRow="QCISOWorkPieceType" msprop:Generator_ColumnVarNameInTable="columnQCISOWorkPieceType" msprop:Generator_ColumnPropNameInTable="QCISOWorkPieceTypeColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RegistrationNo" msprop:Generator_UserColumnName="RegistrationNo" msprop:Generator_ColumnPropNameInRow="RegistrationNo" msprop:Generator_ColumnVarNameInTable="columnRegistrationNo" msprop:Generator_ColumnPropNameInTable="RegistrationNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PeriodofValidity1" msdata:Caption="PeriodofValidity" msprop:Generator_UserColumnName="PeriodofValidity1" msprop:Generator_ColumnVarNameInTable="columnPeriodofValidity1" msprop:Generator_ColumnPropNameInRow="PeriodofValidity1" msprop:Generator_ColumnPropNameInTable="PeriodofValidity1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="OriginalPeriod1" msdata:Caption="OriginalPeriod" msprop:Generator_UserColumnName="OriginalPeriod1" msprop:Generator_ColumnVarNameInTable="columnOriginalPeriod1" msprop:Generator_ColumnPropNameInRow="OriginalPeriod1" msprop:Generator_ColumnPropNameInTable="OriginalPeriod1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="PeriodofProlongation1" msdata:Caption="PeriodofProlongation" msprop:Generator_UserColumnName="PeriodofProlongation1" msprop:Generator_ColumnVarNameInTable="columnPeriodofProlongation1" msprop:Generator_ColumnPropNameInRow="PeriodofProlongation1" msprop:Generator_ColumnPropNameInTable="PeriodofProlongation1Column" type="xs:int" minOccurs="0" />
+              <xs:element name="TheoryResultNeed" msprop:Generator_UserColumnName="TheoryResultNeed" msprop:Generator_ColumnVarNameInTable="columnTheoryResultNeed" msprop:Generator_ColumnPropNameInRow="TheoryResultNeed" msprop:Generator_ColumnPropNameInTable="TheoryResultNeedColumn" type="xs:boolean" />
+              <xs:element name="SkillResultNeed" msprop:Generator_UserColumnName="SkillResultNeed" msprop:Generator_ColumnVarNameInTable="columnSkillResultNeed" msprop:Generator_ColumnPropNameInRow="SkillResultNeed" msprop:Generator_ColumnPropNameInTable="SkillResultNeedColumn" type="xs:boolean" />
+              <xs:element name="PassScore" msprop:Generator_UserColumnName="PassScore" msprop:Generator_ColumnVarNameInTable="columnPassScore" msprop:Generator_ColumnPropNameInRow="PassScore" msprop:Generator_ColumnPropNameInTable="PassScoreColumn" type="xs:int" />
+              <xs:element name="CCSWeldingProcess" msprop:Generator_UserColumnName="CCSWeldingProcess" msprop:Generator_ColumnVarNameInTable="columnCCSWeldingProcess" msprop:Generator_ColumnPropNameInRow="CCSWeldingProcess" msprop:Generator_ColumnPropNameInTable="CCSWeldingProcessColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CCSSubject" msprop:Generator_UserColumnName="CCSSubject" msprop:Generator_ColumnVarNameInTable="columnCCSSubject" msprop:Generator_ColumnPropNameInRow="CCSSubject" msprop:Generator_ColumnPropNameInTable="CCSSubjectColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CCSSubjectTestNo" msprop:Generator_UserColumnName="CCSSubjectTestNo" msprop:Generator_ColumnVarNameInTable="columnCCSSubjectTestNo" msprop:Generator_ColumnPropNameInRow="CCSSubjectTestNo" msprop:Generator_ColumnPropNameInTable="CCSSubjectTestNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCCCSSubject" msprop:Generator_UserColumnName="QCCCSSubject" msprop:Generator_ColumnVarNameInTable="columnQCCCSSubject" msprop:Generator_ColumnPropNameInRow="QCCCSSubject" msprop:Generator_ColumnPropNameInTable="QCCCSSubjectColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="QCCCSSubjectTestNo" msprop:Generator_UserColumnName="QCCCSSubjectTestNo" msprop:Generator_ColumnVarNameInTable="columnQCCCSSubjectTestNo" msprop:Generator_ColumnPropNameInRow="QCCCSSubjectTestNo" msprop:Generator_ColumnPropNameInTable="QCCCSSubjectTestNoColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KindofEmployerManagerUserName" msprop:Generator_UserColumnName="KindofEmployerManagerUserName" msprop:Generator_ColumnVarNameInTable="columnKindofEmployerManagerUserName" msprop:Generator_ColumnPropNameInRow="KindofEmployerManagerUserName" msprop:Generator_ColumnPropNameInTable="KindofEmployerManagerUserNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KindofEmployerManagerName" msprop:Generator_UserColumnName="KindofEmployerManagerName" msprop:Generator_ColumnVarNameInTable="columnKindofEmployerManagerName" msprop:Generator_ColumnPropNameInRow="KindofEmployerManagerName" msprop:Generator_ColumnPropNameInTable="KindofEmployerManagerNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MaterialCCSGroupItemName" msprop:Generator_UserColumnName="MaterialCCSGroupItemName" msprop:Generator_ColumnPropNameInRow="MaterialCCSGroupItemName" msprop:Generator_ColumnVarNameInTable="columnMaterialCCSGroupItemName" msprop:Generator_ColumnPropNameInTable="MaterialCCSGroupItemNameColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Issue" />
+      <xs:field xpath="mstns:IssueNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

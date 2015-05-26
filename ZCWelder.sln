@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZCWelder", "ZCWelder\ZCWelder.csproj", "{1AE54C78-A74D-409A-BAAA-365A423FEC40}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZCCL", "..\ZCCL\ZCCL\ZCCL.csproj", "{8FCC02C4-B42A-459D-881B-380C3CAC355F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZCCLWeb", "..\ZCCL\ZCCLWeb\ZCCLWeb.csproj", "{BEBA2C98-D5AD-433F-9F94-107C3536DA97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AE54C78-A74D-409A-BAAA-365A423FEC40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE54C78-A74D-409A-BAAA-365A423FEC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE54C78-A74D-409A-BAAA-365A423FEC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE54C78-A74D-409A-BAAA-365A423FEC40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FCC02C4-B42A-459D-881B-380C3CAC355F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FCC02C4-B42A-459D-881B-380C3CAC355F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FCC02C4-B42A-459D-881B-380C3CAC355F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FCC02C4-B42A-459D-881B-380C3CAC355F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBA2C98-D5AD-433F-9F94-107C3536DA97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBA2C98-D5AD-433F-9F94-107C3536DA97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBA2C98-D5AD-433F-9F94-107C3536DA97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBA2C98-D5AD-433F-9F94-107C3536DA97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
